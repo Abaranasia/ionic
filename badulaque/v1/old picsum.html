@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de fotos random</title>
+    <style>
+        header,
+        footer {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: linear-gradient(90deg, rgba(150, 123, 27, 1) 0%, rgba(97, 121, 9, 1) 55%, rgba(9, 199, 99, 1) 100%);
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            margin: 10px 0px;
+            color: white
+        }
+        
+        a {
+            color: white
+        }
+        
+        a:hover {
+            color: yellow;
+        }
+        
+        #catalogo {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+        
+        .caja {
+            box-sizing: border-box;
+            width: 310px;
+            height: 210px;
+            padding: 5px;
+            margin: 5px;
+        }
+        
+        .caja img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Selección de imágenes aleatorias</h2>
+        <p><a href="favoritas.html">mis fotos favoritas</a></p>
+    </header>
+    <main>
+        <div id="catalogo"></div>
+    </main>
+    <footer>
+        <h5>Actividad exclusiva para el examen de la primera evaluación de la asignatura DWC (noviembre 2020)</h5>
+    </footer>
+</body>
+<script>
+    var catalogo = document.querySelector("#catalogo");
+
+    fetch('https://picsum.photos/v2/list?page=2')
+        .then(data => data.json())
+
+    .then(fotos => {
+
+        console.log("Hey: " + fotos);
+        console.log("datos en formato JSON: " + JSON.stringify(fotos));
+
+        for (let foto in fotos) {
+            console.log(foto.id);
+            let caja = document.createElement('div');
+            caja.className = "caja";
+            caja.id = fotos[foto].id;
+
+            caja.addEventListener('click', function() {
+                let fav = confirm("Añadir a favoritos esta foto de " + fotos[foto].author);
+                if (fav) {
+                    localStorage.setItem(fotos[foto].id, JSON.stringify(fotos[foto]));
+                    //caja.style.filter = "grayscale(100%)"
+                }
+            })
+
+            let imagen = document.createElement('img');
+            imagen.src = fotos[foto].download_url + ".jpg";
+            caja.appendChild(imagen);
+            catalogo.appendChild(caja);
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Organizador de envíos</title>
+
+<style>
+
+#container {
+	position: relative;
+	margin:0px auto;
+	width: 800px;
+}
+
+table {
+	position: relative;
+	top: 0px;
+	left: 50px;
+	width: 502px;
+	border:solid 1px black;
+	border-collapse: collapse;
+    border-spacing: 0;
+	}
+	
+th {
+	background-color:#9C9;
+	text-align:left;
+}
+td {
+    margin: 0px;
+    padding: 5px;
+	border: 0px 
+}
+
+h1 {
+	margin-left:50px;
+	font-family: Verdana;
+	font-size: 24px;
+}
+h2 {
+	font-family: Verdana;
+	font-size: 14px;
+	font-style: italic;
+}
+
+#botones {
+	position: absolute;
+	top: 60px;
+	left: 580px;
+	width:100px;
+	height:25px;
+
+	padding:10px;	
+}
+
+#organizacion {
+	position: relative;
+	top: 25px;
+	left: 50px;
+	width: 500px;
+	height:520px;
+	border:solid 1px black;
+
+	
+}
+.camiones {
+	position: relative;
+	width: 480px;
+	height:160px;
+	background-color:#999;
+	margin: 10px;
+	overflow: hidden;
+}
+
+.cartel {
+	position: absolute;
+	width: 200px;
+	height:140px;
+	left: 520px;
+	background-color:#9C9;
+	margin: 10px;
+	border:solid 1px black;
+}
+.caja1 {
+		width:18px;
+		height:18px;
+		float:left;
+		background-color:#FFCC99;
+		text-align:center;
+		line-height:18px;
+		margin: 1px;
+	}
+	
+.caja2 {
+		width:38px;
+		height:38px;
+		float:left;
+		background-color:#CCFF99;
+		text-align:center;
+		line-height:38px;
+		margin: 1px;
+	}
+.caja4 {
+		width:78px;
+		height:78px;
+		float:left;
+		background-color:#99CCFF;
+		text-align:center;
+		line-height:78px;
+		margin: 1px;
+	}
+	
+</style>
+
+<script type="text/javascript">
+
+	var areaCajas= {1:400, 2:1600, 4: 6400};
+	var areaCamiones= {camionB:76800, camionM:76800, camionV:76800};
+
+
+function actualizarCargas() {
+	cartelB.innerHTML="<h2>Barcelona</h2><p>Carga restante: "+areaCamiones["camionB"]+"</p>";
+	cartelM.innerHTML="<h2>Madrid</h2><p>Carga restante: "+areaCamiones["camionM"]+"</p>";
+	cartelV.innerHTML="<h2>Valencia</h2><p>Carga restante: "+areaCamiones["camionV"]+"</p>";
+	}
+function calcularEspacio(tam, num) {
+		return areaCajas[tam]*num;
+}
+
+function organizar () {
+		var cont=1;
+		tamano=document.getElementById("tamano").value;
+		numero=document.getElementById("numero").value;
+		destino=document.getElementById("destino").value;
+		//alert (destino+": "+areaCamiones[destino]); 
+		areaCarga=calcularEspacio(tamano, numero);
+		
+		if (areaCarga>areaCamiones[destino]) {
+		alert ("este cargamento no cabe en el camión");
+		}else {
+			for (var i=0;i<numero;i++) {
+				camion= document.getElementById(destino).innerHTML;
+
+				
+				document.getElementById(destino).innerHTML=camion+"<div class=\"caja"+tamano+"\">"+cont+"</div>";
+				cont++;
+			}
+			areaCamiones[destino]=areaCamiones[destino]-areaCarga;
+			//alert (destino+": "+areaCamiones[destino]); 
+		}
+		actualizarCargas();
+}
+</script>
+</head>
+<body onLoad="actualizarCargas()">
+<div id="container">
+    <h1>Organizador de envíos</h1>
+      <table id="tablaEnvios">
+        <tr>
+          <th>Tamaño de paquetes</th>
+          <th>Número de paquetes</th>
+          <th>Destino</th>
+        </tr>
+        <tr>
+          <td><select name="tamano" id="tamano">
+            <option value="1">Pequeño (1u)</option>
+            <option value="2">Mediano (2u)</option>
+            <option value="4">Grande (4u)</option>
+          </select></td>
+          <td><input type="text" name="numero" id="numero" /></td>
+          <td><select name="destino" id="destino">
+            <option value="camionB">Barcelona</option>          
+            <option value="camionM">Madrid</option>
+            <option value="camionV">Valencia</option>
+          </select></td>
+        </tr>
+      </table>
+      <div id="botones">
+          <input type="button" name="organizar" id="organizar" onclick="organizar();" value="Organizar" />
+      </div>
+    <div id="organizacion">
+    	<div class="cartel" id="cartelB"></div>
+    	<div class="camiones" id="camionB"></div>
+		<div class="cartel" id="cartelM"></div>
+		<div class="camiones" id="camionM"></div>
+		<div class="cartel" id="cartelV"></div>
+		<div class="camiones" id="camionV"></div>
+		<div id="espera"></div>
+    </div>
+</div>
+</body>
+</html>

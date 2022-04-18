@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badulaque Plus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <a href="productos.html">
+                <h1>Badulaque Plus</h1>
+            </a>
+        </header>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li>
+                    <a href="carrito.html">Carrito</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Carrito</h2>
+            <div id="carrito"></div>
+
+
+            <div id="modal" style="display:none;">
+                <button class="close" onClick="cerrar()">x</button>
+                <div id="detalle"></div>
+            </div>
+
+
+        </main>
+
+    </div>
+</body>
+<script>
+    var carritoDiv = document.getElementById("carrito");
+
+
+    if (localStorage.length > 0) {
+        // Recorre el locastorage y covierte sus valores en JSON 
+
+        // meter dentro de una capa con class="fav" la foto, título, director y enlace de cada peli; incluir un botón a removeFav() para quitar del storage
+
+
+        // Añade a la capa favoritas la nueva capa con la info de la peli
+
+        for (var i = 0; i < localStorage.length; i++) {
+
+            let compra = JSON.parse(localStorage.getItem(localStorage.key(i)));
+
+            let producto = document.createElement('div');
+            producto.className = "compra";
+            producto.setAttribute('id', compra.id);
+            producto.addEventListener('click', function() {
+                //mostrarDetalle(item.id);
+                alert("borrar")
+            });
+
+            //let capaFav = document.createElement('div');
+
+            producto.innerHTML = '<img src="' + compra.image + '" />'
+
+            producto.innerHTML += '<h4>' + compra.title + '</h4><p>' + compra.price + '€</p><input type="button" onclick=\'removeFav("' + compra.id + '")\' value="eliminar"/></div>';
+
+            carritoDiv.appendChild(producto); //añade a la capa favoritas la nueva capa con la info de la peli
+        }
+
+    } else {
+        carritoDiv.innerHTML = "<h3>No hay productos en tu cesta, nen.</h3>";
+    }
+
+
+    function removeFav(key) { //Esta función borra el producto entrante del storage 
+        console.log(key);
+        localStorage.removeItem(key);
+        location.reload();
+    }
+</script>
+
+</html>

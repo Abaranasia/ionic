@@ -1,0 +1,146 @@
+{
+	"usuarios": [
+        {
+			"id": 0,
+			"email": "alfred.lawlor@reqres.in",
+			"first_name": "Alfred",
+            "last_name": "Lawlor",
+			"specialty": "engineer",
+			"state": "456",
+			"avatar": "https://emhu.es/wp-content/uploads/EMHU2020_IGNATIUS_WEB_600x600-1.jpg"
+        },
+        {
+			"id": 1,
+			"email": "george.bluth@reqres.in",
+			"first_name": "George",
+            "last_name": "Bluth",
+			"specialty": "web",
+			"state": "341",
+			"avatar": "https://reqres.in/img/faces/1-image.jpg"
+		}, {
+			"id": 2,
+			"email": "janet.weaver@reqres.in",
+			"first_name": "Janet",
+            "last_name": "Weaver",
+			"specialty": "web",
+			"state": "available",
+			"avatar": "https://reqres.in/img/faces/2-image.jpg"
+		}, {
+			"id": 3,
+			"email": "emma.wong@reqres.in",
+			"first_name": "Emma",
+            "last_name": "Wong",
+			"specialty": "app",
+			"state": "available",
+			"avatar": "https://reqres.in/img/faces/3-image.jpg"
+		}, {
+			"id": 4,
+			"email": "eve.holt@reqres.in",
+			"first_name": "Eve",
+            "last_name": "Holt",
+			"specialty": "app",
+			"state": "available",
+			"avatar": "https://reqres.in/img/faces/4-image.jpg"
+		}, {
+			"id": 5,
+			"email": "charles.morris@reqres.in",
+			"first_name": "Charles",
+            "last_name": "Morris",
+			"specialty": "web",
+			"state": "available",
+			"avatar": "https://reqres.in/img/faces/5-image.jpg"
+		}, {
+			"id": 6,
+			"email": "tracey.ramos@reqres.in",
+			"first_name": "Tracey",
+            "last_name": "Ramos",
+			"specialty": "web",
+			"state": "234",
+			"avatar": "https://reqres.in/img/faces/6-image.jpg"
+		},
+		{
+			"id": 7,
+			"email": "michael.lawson@reqres.in",
+			"first_name": "Michael",
+            "last_name": "Lawson",
+			"specialty": "app",
+			"state": "available",
+			"avatar": "https://reqres.in/img/faces/7-image.jpg"
+		},
+		{
+			"id": 8,
+			"email": "lindsay.ferguson@reqres.in",
+			"first_name": "Lindsay",
+            "last_name": "Ferguson",
+			"specialty": "web",
+			"state": "available",
+			"avatar": "https://reqres.in/img/faces/8-image.jpg"
+		},
+		{
+			"id": 9,
+			"email": "tobias.funke@reqres.in",
+			"first_name": "Tobias",
+            "last_name": "Funke",
+			"specialty": "app",
+			"state": "available",
+			"avatar": "https://reqres.in/img/faces/9-image.jpg"
+		},
+		{
+			"id": 10,
+			"email": "byron.fields@reqres.in",
+			"first_name": "Byron",
+            "last_name": "Fields",
+			"specialty": "web",
+			"state": "234",
+			"avatar": "https://reqres.in/img/faces/10-image.jpg"
+		},
+		{
+			"id": 11,
+			"email": "george.edwards@reqres.in",
+			"first_name": "George",
+            "last_name": "Edwards",
+			"specialty": "app",
+			"state": "available",
+			"avatar": "https://reqres.in/img/faces/11-image.jpg"
+		},
+		{
+			"id": 12,
+			"email": "rachel.howell@reqres.in",
+			"first_name": "Rachel",
+            "last_name": "Howell",
+			"specialty": "web",
+			"state": "456",
+			"avatar": "https://reqres.in/img/faces/12-image.jpg"
+		}
+	],
+	"proyectos": [
+		{
+			"id": 456,
+			"nombre": "Reckonin Att. SL",
+			"tipo": "web",
+			"descripcion":"Lorem ipsum",
+			"fechaInicio": "02/02/2020"
+		},
+		{
+			"id": 234,
+			"nombre": "Alfa XCV",
+			"tipo": "app",
+			"descripcion":"Lorem ipsum",
+			"fechaInicio": "03/04/2021"
+		},
+		{
+			"id": 234,
+			"nombre": "Beta XCV",
+			"tipo": "web",
+			"descripcion":"Lorem ipsum",
+			"fechaInicio": "13/11/2020"
+		},
+		{
+			"id": 341,
+			"nombre": "NO-Octal Vibes",
+			"tipo": "app",
+			"descripcion":"Lorem ipsum",
+			"fechaInicio": "10/10/2019"
+		}
+	]
+}

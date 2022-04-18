@@ -1,0 +1,266 @@
+{
+		"comics": [{
+				"id": "001",
+				"titulo": "Persepolis",
+				"editorial": {
+					"tomos": "4",
+					"nombre": "Norma Editorial"
+				},
+				"fechapub": "2001",
+				"estilo": "franco-belga",
+				"genero": "2001",
+				"enlace": "https://es.wikipedia.org/wiki/Pers%C3%A9polis_%28historieta%29",
+				"cubierta": "images/Persepolis.jpg",
+				"origen": "Europa",
+				"autores": {
+					"guion": "Marjane Satrapi",
+					"dibujo": "Marjane Satrapi",
+					"tinta": "Marjane Satrapi",
+					"color": "Blanco y Negro"
+				},
+				"premios": {
+					"premio": [{
+							"nombre": "Prix du Lion",
+							"pais": "Belgica",
+							"anyo": "2000"
+						},
+						{
+							"nombre": "Prix du Lion",
+							"pais": "Angouleme",
+							"anyo": "2001"
+						},
+						{
+							"nombre": "Premio al mejor guion",
+							"pais": "Angouleme",
+							"anyo": "2002"
+						}
+					]
+				},
+				"descripcion": "Persepolis es el titulo de una novela grafica en blanco y negro escrita e ilustrada en forma autobiografica por Marjane Satrapi(Rasht, Iran, 1969).Consta de cuatro tomos, aunque tambien se publica un volumen integral que contiene los cuatro libros."
+			},
+			{
+				"id": "002",
+				"titulo": "Watchmen",
+				"editorial": {
+					"tomos": "12",
+					"nombre": "Dc Comics"
+				},
+				"fechapub": "1986",
+				"estilo": "Estadounidense",
+				"genero": "Aventuras",
+				"enlace": "https://es.wikipedia.org/wiki/Watchmen",
+				"cubierta": "images/watchmen.jpg",
+				"origen": "EEUU",
+				"autores": {
+					"guion": "Alan Moore",
+					"dibujo": "Dave Gibbons",
+					"tinta": "Dave Gibbons",
+					"color": "John Higgins"
+				},
+				"premios": {
+					"premio": [{
+							"nombre": "Premio Hugo",
+							"pais": "Francia",
+							"anyo": "1988"
+						},
+						{
+							"nombre": "Premio Eisner",
+							"pais": "Estados Unidos",
+							"anyo": "1988"
+						},
+						{
+							"nombre": "Premio Harvey",
+							"pais": "Estados Unidos",
+							"anyo": "1988"
+						}
+					]
+				},
+				"descripcion": "Watchmen se desarrolla en una realidad alternativa que refleja fielmente el mundo contemporaneo de la década de 1980. La principal diferencia es la presencia de superheroes.El punto de divergencia se produce en el año 1983. Su existencia en esta version de Estados Unidos esta demostrando que han afectado dramaticamente y alterado los resultados de la Guerra de Vietnam y la presidencia de Richard Nixon."
+			},
+			{
+				"id": "003",
+				"titulo": "Akira",
+				"editorial": {
+					"tomos": "6",
+					"nombre": "Kodansha"
+				},
+				"fechapub": "1982",
+				"estilo": "Japon",
+				"genero": "2001",
+				"enlace": "https://es.wikipedia.org/wiki/Akira_%28manga%29",
+				"cubierta": "images/akira.jpg",
+				"origen": "Japon",
+				"autores": {
+					"guion": "Katsuhiro Otomo",
+					"dibujo": "Katsuhiro Otomo",
+					"tinta": "Katsuhiro Otomo",
+					"color": "Blanco y Negro"
+				},
+				"premios": {
+					"premio": [{
+							"nombre": " Kodansha Manga Award ",
+							"pais": "Japon",
+							"anyo": "1984"
+						},
+						{
+							"nombre": "Harvey Award ",
+							"pais": "Estados Unidos",
+							"anyo": "1993"
+						}
+					]
+				},
+				"descripcion": "1988: El mundo esta al borde de la destruccion absoluta.La tecnologia avanzada fue la causa de una terrible explosion que desencadeno una guerra nuclear y devasto las grandes ciudades del planeta.Treinta años despues,sobre las ruinas de Tokio,se alza la megalopolis de Neo - Tokio, una ciudad opresiva e inhumana cargada de problemas como el desempleo, la violencia, la droga y el terrorismo."
+			},
+			{
+				"id": "004",
+				"titulo": "Maus",
+				"editorial": {
+					"tomos": "2",
+					"nombre": "Apex Novelties"
+				},
+				"fechapub": "1977",
+				"estilo": "alternativo-estadounidense",
+				"genero": "Biografico / Historico",
+				"enlace": "https://es.wikipedia.org/wiki/Maus",
+				"cubierta": "images/Maus.jpg",
+				"origen": "EEUU",
+				"autores": {
+					"guion": "Art Spiegelman",
+					"dibujo": "Art Spiegelman",
+					"tinta": "Art Spiegelman",
+					"color": "Art Spiegelman"
+				},
+				"premios": {
+					"premio": [{
+							"nombre": "Comic de Angouleme",
+							"pais": "Angouleme",
+							"anyo": "1988"
+						},
+						{
+							"nombre": "Premio Urhunden",
+							"pais": "Suecia",
+							"anyo": "1988"
+						},
+						{
+							"nombre": "Premio Max y Moritz",
+							"pais": "Alemania",
+							"anyo": "1990"
+						}
+					]
+				},
+				"descripcion": "Narración den dos lineas de tiempo.En la linea de tiempo de la narracion en presente, la cual comienza en 1978 en Rego Park(Nueva York), Spiegelman habla con su padre acerca de sus experiencias con el Holocausto, con la intencion de reunir material para el proyecto que se encuentra preparando: Maus.En la narración en pasado, Spiegelman muestra estas experiencias, comenzando con los años previos a la Segunda Guerra Mundial."
+			},
+			{
+				"id": "005",
+				"titulo": "From Hell",
+				"editorial": {
+					"tomos": "10",
+					"nombre": "Eddie Campbell Comics"
+				},
+				"fechapub": "1991",
+				"estilo": "estadounidense-britanica",
+				"genero": "policiaco y terror",
+				"enlace": "https://es.wikipedia.org/wiki/From_Hell",
+				"cubierta": "images/FromHell.jpg",
+				"origen": "Europa",
+				"autores": {
+					"guion": "Alan Moore",
+					"dibujo": "Eddie Campbell",
+					"tinta": "Eddie Campbell",
+					"color": "Blanco y Negro"
+				},
+				"premios": {
+					"premio": [{
+							"nombre": " Comics Buyer's Guide",
+							"pais": "Estados unidos",
+							"anyo": "1997"
+						},
+						{
+							"nombre": "Prix de la critique",
+							"pais": "Angouleme",
+							"anyo": "2001"
+						}
+					]
+				},
+				"descripcion": "From Hell toma como punto de partida la teoría del libro de Stephen Knight,Jack the Ripper: The Final Solution - considerada en general poco solvente por los expertos - , 1 2 segun la cual los asesinatos serian el resultado de una conspiracion masonica y real para ocultar el nacimiento de un hijo ilegitimo del principe Alberto, Duque de Clarence, nieto de la reina Victoria."
+			},
+			{
+				"id": "006",
+				"titulo": "Batman: The Dark Knight Returns",
+				"editorial": {
+					"tomos": "4",
+					"nombre": "DC Comics"
+				},
+				"fechapub": "1986",
+				"estilo": "estadounidense",
+				"genero": "superhéroes",
+				"origen": "EEUU",
+				"enlace": "https://es.wikipedia.org/wiki/Batman:_The_Dark_Knight_Returns",
+				"cubierta": "images/DarkKnightReturns.jpg",
+				"autores": {
+					"guion": "Frank Miller",
+					"dibujo": "Frank Miller",
+					"tinta": "Klaus Janson",
+					"color": "color"
+				},
+				"premios": {
+					"premio": [{
+							"nombre": "Buyer's Guide",
+							"pais": "Estados unidos",
+							"anyo": "1986"
+						},
+						{
+							"nombre": "Premio Eisner",
+							"pais": "Estados Unidos",
+							"anyo": "1986"
+						},
+						{
+							"nombre": "Premio Harvey",
+							"pais": "Estados Unidos",
+							"anyo": "1986"
+						}
+					]
+				},
+				"descripcion": "Considerada como la obra más importante de Batman publicada en los últimos años.La trama, que transcurre durante una ucrónica década de 1980, narra la vuelta de un Batman quincuagenario a la actividad para una última limpieza de su amada ciudad de Gotham, convirtiéndose definitivamente en leyenda.Se estructura bajo una rígida estructura de dieciséis viñetas encuadra una espléndida narración de carácter épico y fuerte tensión narrativa, que disecciona al personaje y la sociedad tendenciosamente corrupta y que le obliga a salir de su retiro."
+			},
+{
+				"id": "007",
+				"titulo": "El Incal",
+				"editorial": {
+					"tomos": "6",
+					"nombre": "Les Humanoïdes Associés"
+				},
+				"fechapub": "1980",
+				"estilo": "europeo",
+				"genero": "ciencia ficción",
+				"origen": "Europa",
+				"enlace": "https://es.wikipedia.org/wiki/El_Incal",
+				"cubierta": "images/Incal.jpg",
+				"autores": {
+					"guion": "Alejandro Jodorowsky",
+					"dibujo": "Moebius",
+					"tinta": "Moebius",
+					"color": "Moebius"
+				},
+				"premios": {
+					"premio": [{
+							"nombre": "Micheluzzi",
+							"pais": "Italia",
+							"anyo": "1998"
+						},
+						{
+							"nombre": "Premio Eisner",
+							"pais": "Estados Unidos",
+							"anyo": "2011"
+						},
+						{
+							"nombre": "Premio Harvey",
+							"pais": "Estados Unidos",
+							"anyo": "1989"
+						}
+					]
+				},
+				"descripcion": "El Incal, también conocida como La Saga de los Incales o Las Aventuras de John Difool, es una historieta de ciencia ficción realizada desde 1980 a 1988 por el guionista Alejandro Jodorowsky y el historietista e ilustrador francés Moebius. Con más de un millón de ejemplares vendidos, traducido a más de veinte idiomas, y reeditado innumerables veces (tres, en España) es el cómic europeo más divulgado de la Historia del cómic desde 1980 hasta la actualidad."
+			}
+		]
+}

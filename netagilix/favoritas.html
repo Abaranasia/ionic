@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Netágilix - mis favoritas</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <style>
+
+    </style>
+</head>
+
+<body id="mispelis">
+    <header>
+        <h1>Netágilix Streaming service</h1>
+    </header>
+
+
+    <main id="portada">
+        <h2> Mi lista de películas favoritas</h2>
+        <div id="favoritas"></div>
+    </main>
+
+    <footer><a href="netagilix.html" class="enlace">Regresar</footer>
+
+</body>
+<script>
+    var favoritas= document.getElementById("favoritas");
+
+
+    if (localStorage.length>0){ 
+        // Recorre el locastorage y covierte sus valores en JSON 
+        
+        // meter dentro de una capa con class="fav" la foto, título, director y enlace de cada peli; incluir un botón a removeFav() para quitar del storage
+
+        // La foto tiene una altura de 250px
+
+        // Añade a la capa favoritas la nueva capa con la info de la peli
+
+        for (var i = 0; i < localStorage.length; i++){
+   
+            let capaFav = document.createElement('div');
+
+            let favPeli= JSON.parse (localStorage.getItem(localStorage.key(i)));
+            
+            capaFav.innerHTML = '<img height="250px" src="' + favPeli.foto + '" />'
+
+            capaFav.innerHTML += '<div class="texto"><h2>' + favPeli.titulo + '</h2><p><b>Dirigida por: </b>' + favPeli.director + '</p><p><a href="' + favPeli.info + '" target="_blank">Ver más información</a> </p><input type="button" onclick=\'removeFav("' + favPeli.titulo + '")\' value="eliminar de favoritas"/></div>';
+            capaFav.classList.add("fav");
+
+            favoritas.appendChild(capaFav); //añade a la capa favoritas la nueva capa con la info de la peli
+        }
+
+    }else {
+        favoritas.innerHTML="<h3>Actualmente no hay películas en la lista de favoritas</h3>";
+    }
+
+
+    function removeFav (key) { //Esta función borra la peli entrante del storage 
+        console.log (key);
+        localStorage.removeItem(key);
+        location.reload(); 
+    }
+
+</script>
+
+</html>

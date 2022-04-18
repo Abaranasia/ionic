@@ -1,0 +1,25 @@
+<html>
+
+<head></head>
+
+<body>
+
+	{for $x in doc("juego de tronos.xml")//casas/casa
+	let $vasallos:= distinct-values($x/miembros/vasallos)
+	return
+		<h2>Vasallos de la {$x/nombrec/text()}</h2>
+		<ul>
+		
+		{for $vasallo in $vasallos return
+		
+		<li>{$vasallo}</li>
+		}
+		
+		</ul>
+	
+	}
+
+
+</body>
+
+</html>

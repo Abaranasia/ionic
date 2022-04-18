@@ -1,0 +1,251 @@
+{
+   "peliculas": {
+      "novedades": [
+        {
+            "titulo": "The Joker",
+            "anyo": 2019,
+            "director": "Todd Phillips",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg",
+            "info": "https://en.wikipedia.org/wiki/Joker_(2019_film)",				
+            "datos": "Joker (conocida como Guasón en Hispanoamérica) es una película de suspenso y drama psicológico estadounidense de 2019 distribuida por Warner Bros. Pictures y basada en el Joker, personaje de DC Comics. Es la primera de una serie de películas basadas en DC separadas del universo extendido de DC (DCEU) compartido. La película es dirigida por Todd Phillips a partir de un guion que escribió con Scott Silver, y protagonizada por Joaquin Phoenix, junto con Robert De Niro, Zazie Beetz, Bill Camp, Frances Conroy, Brett Cullen, Glenn Fleshler, Douglas Hodge, Marc Maron, Josh Pais y Shea Whigham. La trama sigue a Arthur Fleck, un comediante fallido y enfermo mental, quien se hunde en la locura y se convierte paulatina e inconscientemente en la cabeza de una rebelión popular bajo el rol del Joker.",
+            "valoracion": 5,
+            "comentarios": {
+                "1": "Menos mal que sale Bruce Wayne, si no me da algo. El resto, pasable",
+                "2": "Biografía de un payacho",
+                "3": "Obra maestra, uno de los mejores papeles de Jack Nicholson"
+            }
+        },
+        {
+            "titulo":"IT",
+            "anyo": 2017,
+            "director": "Andrés Muschietti",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg",
+            "info": "https://es.wikipedia.org/wiki/It_(pel%C3%ADcula_de_2017)",
+            "datos": "It (titulada: It (Eso) en Hispanoamérica) es una película de 2017 producida por New Line Cinema, KatzSmith Productions, Lin Pictures y Vertigo Entertainment, y distribuida por Warner Bros Pictures.​ Es la segunda adaptación de la novela homónima de Stephen King y está destinada a ser la primera entrega de una duología planificada. La novela fue adaptada previamente en una miniserie de 1990. La película cuenta la historia de siete niños en Derry, Maine, que son aterrorizados por un ser epónimo, sólo para hacer frente a sus propios demonios personales en el proceso.",
+            "valoracion": 4,
+            "comentarios": {
+                "1": "La triste vida de un payacho en un pueblo de intolerantes y xenófobos",
+                "2": "Verano azul con algunos sustacos. Entretenida, pero molan más los Goonies",
+                "3": "Magistral obra de arte sobre el siempre machacado mundo del circo"
+            }
+        },
+        {
+            "titulo": "It 2",
+            "anyo": 2019,
+            "director": "Andrés Muschietti",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/8/88/ItChapterTwoTeaser.jpg/220px-ItChapterTwoTeaser.jpg",
+            "info": "https://es.wikipedia.org/wiki/It_Cap%C3%ADtulo_Dos",
+            "datos": "It Capítulo Dos (en inglés: It Chapter Two) es una película de terror sobrenatural estadounidense de 2019 dirigida por Andrés Muschietti y escrita por Gary Dauberman y Jeffrey Jurgensen. Es una secuela directa de la película de 2017 It, y es la segunda película de la duología basada en la novela homónima de Stephen King. La cinta está protagonizada por James McAvoy, Jessica Chastain, Jay Ryan, Bill Hader, Isaiah Mustafa, James Ransone y Andy Bean. Bill Skarsgård repite su papel de Pennywise, el payaso, junto con gran parte del elenco infantil de la primera película, incluidos Jaeden Lieberher, Sophia Lillis, Jeremy Ray Taylor, Finn Wolfhard, Chosen Jacobs, Jack Dylan Grazer, Wyatt Oleff y Jackson Robert Scott. ",
+            "valoracion": 4,
+            "comentarios": {
+                "1": "No entendí nada. Se pasan la peli corriendo y contando chistes y a veces hay payachos",
+                "2": "Vivo con tu madre, en un castillo...",
+                "3": "Peliculún, otro gran papel de Jack Nicholson"
+            }
+        },
+        {
+            "titulo": "Avengers: Endgame",
+            "anyo": 2019,
+            "director": "Anthony y Joe Russo",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg",
+            "info": "https://es.wikipedia.org/wiki/Avengers:_Endgame",
+            "datos": "Avengers: Endgame (Vengadores: Endgame en España)​ es una película de superhéroes estadounidense de 2019 basada en el grupo los Vengadores de Marvel Comics, producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures. Es una secuela directa de la película de 2018 Avengers: Infinity War y una continuación de The Avengers (2012) y Avengers: Age of Ultron (2015), siendo la vigesimosegunda película del Universo cinematográfico de Marvel (MCU, por sus siglas en inglés). La cinta está dirigida por Anthony y Joe Russo, con un guion escrito por el equipo conformado por Christopher Markus y Stephen McFeely, y contando con la aparición de múltiples actores de películas anteriores del Universo cinematográfico de Marvel. ",
+            "valoracion": 5,
+            "comentarios": {
+                "1": "Me dijeron que era la mejor peli así de superhéroes y es por donde pensé en empezar y no me enteré de nada oiga",
+                "2": "No entendí por qué hay dos Thannos y por qué el capi se hace viejo tan rápido al final",
+                "3": "Me flipan los (SPOILER!) viajes en el tiempo, pero sin Jack Nicholson se me antoja aburrido"
+            }
+        },
+        {
+            "titulo": "Mary Poppins",
+            "anyo": 1964,
+            "director": "Robert Stevenson",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/7/78/Marypoppins.jpg/220px-Marypoppins.jpg",
+            "info": "https://es.wikipedia.org/wiki/Mary_Poppins_(pel%C3%ADcula)",
+            "datos": "Mary Poppins es una película musical de fantasía, dirigida por Robert Stevenson, producida por Walt Disney y con canciones escritas por los hermanos Sherman, estrenada en 1964. El guion, escrito por Bill Walsh y Don DaGradi, está basado en la serie de novelas Mary Poppins escritas por Pamela Lyndon Travers. La película, que contiene escenas que combinan imágenes reales con animación, está protagonizada por Julie Andrews como Mary Poppins, una niñera mágica que visita a una familia disfuncional en Londres, y utiliza su estilo único para mejorar la vida de la familia. También forman parte del reparto Dick Van Dyke, David Tomlinson y Glynis Johns, entre otros. Fue rodada íntegramente en los Estudios Walt Disney en Burbank, California, utilizando fondos de Londres pintados.",
+            "valoracion": 5,
+            "comentarios": {
+                "1": "Grandes Jack Nicholson y Lina Morgan!",
+                "2": "No paran de puto cantar, esta gente es abominable y merece ser exterminada",
+                "3": "Una de las más intrigantes obras de M. Night Shyamalan. Muy recomendable"
+            }
+        },
+        {
+            "titulo": "After Earth",
+            "anyo": 2013,
+            "director": "M. Night Shyamalan",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/After_Earth_Poster.jpg/220px-After_Earth_Poster.jpg",
+            "info": "https://en.wikipedia.org/wiki/After_Earth",
+            "datos": "After Earth (Después de la Tierra en Hispanoamérica) es una película de ciencia ficción y aventuras dirigida por M. Night Shyamalan y protagonizada por Jaden Smith y Will Smith en los papeles principales. La película, coproducida por Smith, Shyamalan y otros, fue filmada en Costa Rica, específicamente en La Fortuna de San Carlos y Sarapiquí.1​ El estreno tuvo lugar el 31 de mayo de 2013 en Nueva York, y está distribuida por Columbia Pictures y Sony Entertainment.",
+            "valoracion": 2,
+            "comentarios": {
+                "1": " Will Smith  siempre mola, menos cuando hace de niño",
+                "2": "Truñaco de los chungos. Qué penica",
+                "3": "Una de las cosas que hace M. Night Shyamalan cuando está poco inspirado. Entretenida a ratos pero no mola mucho"
+            }
+        }
+
+      ],
+      "scifi": [
+        {
+            "titulo":"Interstellar",
+            "anyo": 2014,
+            "director": "Christopher Nolan",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg",
+            "info": "https://en.wikipedia.org/wiki/Interstellar_(film)",
+            "datos": "Interstellar (Interestelar en Hispanoamérica) es una película épica de ciencia ficción estadounidense de 2014, dirigida por Christopher Nolan y protagonizada por Matthew McConaughey, Anne Hathaway, Jessica Chastain, Michael Caine y Matt Damon. La película presenta a un equipo de astronautas que viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad. Los hermanos Christopher y Jonathan Nolan escribieron el guion, que tuvo su origen en un borrador que Jonathan desarrolló en 2007. Christopher Nolan produjo la película junto a su esposa Emma Thomas mediante su compañía productora Syncopy, y con Lynda Obst a través de Lynda Obst Productions. El físico teórico Kip Thorne, cuyo trabajo inspiró la película, fue productor ejecutivo y participó como consultor científico. Warner Bros., Paramount Pictures y Legendary Pictures cofinanciaron la película. ",
+            "valoracion": 5,
+            "comentarios": {
+                "1": "Un tío con un campo de maiz que persigue drones... Pensaba que sería de naves y tal, pero me dormí cuando se pone a reparar tractores",
+                "2": "Un piloto militar tiene un mal día y se dedica a cultivar maiz hasta que se aburre se va del planeta para no volver jamás",
+                "3": "Obra maestra del SCI-Fi hardcore, muy lírica y visualmente espectacular. Christopher Nolan en estado de gracia"
+            }
+        },
+        {
+            "titulo": "Inception",
+            "anyo": 2010,
+            "director": "Christopher Nolan",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
+            "info": "https://en.wikipedia.org/wiki/Inception",
+            "datos": "Inception (Origen, en España, y El origen, en Hispanoamérica) es una película estadounidense de ciencia ficción escrita, producida y dirigida por Christopher Nolan y protagonizada por Leonardo DiCaprio, Ellen Page, Joseph Gordon-Levitt, Ken Watanabe, Tom Hardy, Marion Cotillard, Cillian Murphy, Tom Berenger y Michael Caine. Se estrenó en Londres, Reino Unido, el 8 de julio del 2010, y en los Estados Unidos el 16 de julio del 2010.2​ Obtuvo 4 premios Óscar (Mejor Fotografía, Mejor Mezcla de Sonido, Mejor Edición de Sonido y Mejores Efectos Visuales), tres premios BAFTA (Mejor Diseño de Producción, Mejor Sonido y Mejores Efectos Especiales), nominaciones en los Óscar (Mejor banda sonora, Mejor Guion Original y Mejor Dirección Artística), en los Globos de Oro y en los Premios BAFTA (sobre todo, Mejor Película, Mejor Director, Mejor Banda Sonora y Mejor Guion). Además, obtuvo el tercer lugar de taquilla en el 2010, según la ABC",
+            "valoracion": 4,
+            "comentarios": {
+                "1": "No entendí nada. Se pasan la peli sobando, como yo cuando la vi",
+                "2": "Me gustó el Leonardo ese, lo creía muerto después de Titanic",
+                "3": "Christopher Nolan siempre mola, aunque no sea Batman. Entretenida e intrigante. Muy recomendable"
+            }
+        },
+        {
+            "titulo": "2001: A Space Odyssey",
+            "anyo": 1968,
+            "director": "Stanley Kubrick",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/2001_A_Space_Odyssey_%281968%29.png/220px-2001_A_Space_Odyssey_%281968%29.png",
+            "info": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey",
+            "datos": "2001: A Space Odyssey (en Hispanoamérica, 2001: Odisea del espacio; en España 2001: Una odisea del espacio) es una película de culto del género ciencia ficción dirigida por Stanley Kubrick y estrenada el 3 de abril de 1968. Marcó un hito por su estilo de comunicación visual, sus revolucionarios efectos especiales, su realismo científico y sus proyecciones vanguardistas. Su trama se centra en un equipo de astronautas, que trata de seguir las señales de radio emitidas por un extraño monolito hallado en la Luna y que parece ser obra de una civilización extraterrestre. El reparto está integrado por Keir Dullea como Dave Bowman, Gary Lockwood como Frank Poole, Douglas Rain como la voz de HAL 9000 y William Sylvester como el Dr. Heywood Floyd.",
+            "valoracion": 5,
+            "comentarios": {
+                "1": "Obra maestra",
+                "2": "To crema, pero no entendí un carajo",
+                "3": "Una de las más dinámicas puestas en escena de Stanley Kubrick. Entretenida e intrigante. Muy recomendable"
+            }
+        },
+        {
+            "titulo": "Avengers: Endgame",
+            "anyo": 2019,
+            "director": "Anthony y Joe Russo",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg",
+            "info": "https://es.wikipedia.org/wiki/Avengers:_Endgame",
+            "datos": "Avengers: Endgame (Vengadores: Endgame en España)​ es una película de superhéroes estadounidense de 2019 basada en el grupo los Vengadores de Marvel Comics, producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures. Es una secuela directa de la película de 2018 Avengers: Infinity War y una continuación de The Avengers (2012) y Avengers: Age of Ultron (2015), siendo la vigesimosegunda película del Universo cinematográfico de Marvel (MCU, por sus siglas en inglés). La cinta está dirigida por Anthony y Joe Russo, con un guion escrito por el equipo conformado por Christopher Markus y Stephen McFeely, y contando con la aparición de múltiples actores de películas anteriores del Universo cinematográfico de Marvel. ",
+            "valoracion": 5,
+            "comentarios": {
+                "1": "Me dijeron que era la mejor peli así de superhéroes y es por donde pensé en empezar y no me enteré de nada oiga",
+                "2": "No entendí por qué hay dos Thannos y por qué el capi se hace viejo tan rápido al final",
+                "3": "Me flipan los (SPOILER!) viajes en el tiempo, pero sin Jack Nicholson se me antoja aburrido"
+            }
+        },
+        {
+            "titulo": "Waterworld",
+            "anyo": 1995,
+            "director": "Kevin Reynolds",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Waterworld.jpg/215px-Waterworld.jpg",
+            "info": "https://es.wikipedia.org/wiki/Waterworld",
+            "datos": "Waterworld (En Latinoamérica, Mundo Acuático) es una película de acción y ciencia ficción post-apocalíptica estadounidense de 1995 dirigida por Kevin Reynolds y co-escrita por Peter Rader y David Twohy. Basada en el guion original de Rader de 1986, está protagonizada por Kevin Costner, quien también la produjo junto a Charles Gordon y John Davis. Fue distribuida por Universal Pictures. Fue la película más cara jamás realizada en ese momento. Fue nomina para un Premio de la Academia en la categoría Mejor sonido en los 68º Premios de la Academia. El escenario de la película se ambienta en un futuro lejano. Aunque no se proporciona una fecha exacta en la película, se ha sugerido que tiene lugar en 2500.​ Los casquetes polares se han derretido por completo, y el nivel del mar ha aumentado más de 7,5 km, cubriendo casi toda la tierra. Mienrtas un vagabundo navega la Tierra en su trimarán.",
+            "valoracion": 2,
+            "comentarios": {
+                "1": "Me dijeron que era la mejor peli de Kein Costner y es cierto, el tío lo peta por encima y por debajo del agua",
+                "2": "Me falta un malo emblemático, como podría solo haber sido Jack Nicholson de payacho, y sería una obra maestra. Mientras apesta.",
+                "3": "Me moló tanto que tengo tatuada la cara de Kevin Costner en la espalda (y en una nalga también)"
+            }
+        },        
+        {
+            "titulo": "After Earth",
+            "anyo": 2013,
+            "director": "M. Night Shyamalan",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/After_Earth_Poster.jpg/220px-After_Earth_Poster.jpg",
+            "info": "https://en.wikipedia.org/wiki/After_Earth",
+            "datos": "After Earth (Después de la Tierra en Hispanoamérica) es una película de ciencia ficción y aventuras dirigida por M. Night Shyamalan y protagonizada por Jaden Smith y Will Smith en los papeles principales. La película, coproducida por Smith, Shyamalan y otros, fue filmada en Costa Rica, específicamente en La Fortuna de San Carlos y Sarapiquí.1​ El estreno tuvo lugar el 31 de mayo de 2013 en Nueva York, y está distribuida por Columbia Pictures y Sony Entertainment.",
+            "valoracion": 2,
+            "comentarios": {
+                "1": " Will Smith  siempre mola, menos cuando hace de niño",
+                "2": "Truñaco de los chungos. Qué penica",
+                "3": "Una de las cosas que hace M. Night Shyamalan cuando está poco inspirado. Entretenida a ratos pero no mola mucho"
+            }
+        }
+
+      ],
+      "thriller": [
+        {
+            "titulo": "Seven",
+            "anyo": 1995,
+            "director": "David Fincher",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/6/68/Seven_%28movie%29_poster.jpg",
+            "info": "https://en.wikipedia.org/wiki/Seven_(1995_film)",				
+            "datos": "Seven (comercialmente estilizado como Se7en) es una película estadounidense de suspenso y terror de 1995 dirigida por David Fincher, escrita por Andrew Kevin Walker (quien obtuvo una nominación al premio Bafta por el mejor guion original) y distribuida por New Line Cinema. La película es una mezcla de cine negro, psychothriller y buddy movies en la cual actúan Brad Pitt y Morgan Freeman en los papeles estelares, así como Gwyneth Paltrow y Kevin Spacey en los de reparto. Después de su estreno se rodó una serie de películas sobre psicópatas metódicos con un fin intelectual en sus crímenes, aunque ninguno de tales filmes logró el impacto que causó esta película.",
+            "valoracion": 4,
+            "comentarios": {
+                "1": "gran peli, me emosionó",
+                "2": "Truñaco de los chungos. Me recordó a Titanic",
+                "3": "Una de las más dinámicas puestas en escena de David Finchner. Entretenida e intrigante. Muy recomendable"
+            }
+        },
+        {
+            "titulo": "Mary Poppins",
+            "anyo": 1964,
+            "director": "Robert Stevenson",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/7/78/Marypoppins.jpg/220px-Marypoppins.jpg",
+            "info": "https://es.wikipedia.org/wiki/Mary_Poppins_(pel%C3%ADcula)",
+            "datos": "Mary Poppins es una película musical de fantasía, dirigida por Robert Stevenson, producida por Walt Disney y con canciones escritas por los hermanos Sherman, estrenada en 1964. El guion, escrito por Bill Walsh y Don DaGradi, está basado en la serie de novelas Mary Poppins escritas por Pamela Lyndon Travers. La película, que contiene escenas que combinan imágenes reales con animación, está protagonizada por Julie Andrews como Mary Poppins, una niñera mágica que visita a una familia disfuncional en Londres, y utiliza su estilo único para mejorar la vida de la familia. También forman parte del reparto Dick Van Dyke, David Tomlinson y Glynis Johns, entre otros. Fue rodada íntegramente en los Estudios Walt Disney en Burbank, California, utilizando fondos de Londres pintados.",
+            "valoracion": 5,
+            "comentarios": {
+                "1": "Grandes Jack Nicholson y Lina Morgan!",
+                "2": "No paran de puto cantar, esta gente es abominable y merece ser exterminada",
+                "3": "Una de las más intrigantes obras de M. Night Shyamalan. Muy recomendable"
+            }
+        },
+        {
+            "titulo":"IT",
+            "anyo": 2017,
+            "director": "Andrés Muschietti",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg",
+            "info": "https://es.wikipedia.org/wiki/It_(pel%C3%ADcula_de_2017)",
+            "datos": "It (titulada: It (Eso) en Hispanoamérica) es una película de 2017 producida por New Line Cinema, KatzSmith Productions, Lin Pictures y Vertigo Entertainment, y distribuida por Warner Bros Pictures.​ Es la segunda adaptación de la novela homónima de Stephen King y está destinada a ser la primera entrega de una duología planificada. La novela fue adaptada previamente en una miniserie de 1990. La película cuenta la historia de siete niños en Derry, Maine, que son aterrorizados por un ser epónimo, sólo para hacer frente a sus propios demonios personales en el proceso.",
+            "valoracion": 4,
+            "comentarios": {
+                "1": "La triste vida de un payacho en un pueblo de intolerantes y xenófobos",
+                "2": "Verano azul con algunos sustacos. Entretenida, pero molan más los Goonies",
+                "3": "Magistral obra de arte sobre el siempre machacado mundo del circo"
+            }
+        },
+        {
+            "titulo": "The Sixth Sense",
+            "anyo": 1999,
+            "director": "M Night Shyamalan",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/a/a4/The_Sixth_Sense_poster.png",
+            "info": "https://en.wikipedia.org/wiki/The_Sixth_Sense",
+            "datos": "The Sixth Sense (titulada El sexto sentido en España y Sexto sentido en Hispanoamérica) es una película estadounidense del género de suspense de 1999 dirigida por el realizador indio​ M. Night Shyamalan, sobre un guión original propio. Relata la experiencia de un psicólogo que intenta descubrir cómo ayudar a un niño a enfrentar la terrible verdad de sus poderes sobrenaturales. Su estreno provocó un fenómeno de público y de crítica, algo poco visto en ese entonces con respecto a las películas de su género, que mezcla el drama con el suspense y el terror. Su protagonista Haley Joel Osment cobró fama mundial por su interpretación del pequeño Cole, que se ve atormentado por extraños sucesos paranormales. Su rol le proporcionó una nominación al Premio Óscar al mejor actor de reparto. La película obtuvo un total de seis nominaciones, incluida la de mejor película.",
+            "valoracion": 5,
+            "comentarios": {
+                "1": "Una comedia romántica como pocas. Must see!",
+                "2": "No entendí nada: me dormí justo después de que matan a Bruce Willis y luego lo vi por ahi a ratos. paso de las pelis de flashbacks",
+                "3": "Una de las más intrigantes obras de M. Night Shyamalan. Muy recomendable"
+            }
+        },
+        {
+            "titulo": "The Joker",
+            "anyo": 2019,
+            "director": "Todd Phillips",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg",
+            "info": "https://en.wikipedia.org/wiki/Joker_(2019_film)",				
+            "datos": "Joker (conocida como Guasón en Hispanoamérica) es una película de suspenso y drama psicológico estadounidense de 2019 distribuida por Warner Bros. Pictures y basada en el Joker, personaje de DC Comics. Es la primera de una serie de películas basadas en DC separadas del universo extendido de DC (DCEU) compartido. La película es dirigida por Todd Phillips a partir de un guion que escribió con Scott Silver, y protagonizada por Joaquin Phoenix, junto con Robert De Niro, Zazie Beetz, Bill Camp, Frances Conroy, Brett Cullen, Glenn Fleshler, Douglas Hodge, Marc Maron, Josh Pais y Shea Whigham. La trama sigue a Arthur Fleck, un comediante fallido y enfermo mental, quien se hunde en la locura y se convierte paulatina e inconscientemente en la cabeza de una rebelión popular bajo el rol del Joker.",
+            "valoracion": 5,
+            "comentarios": {
+                "1": "Menos mal que sale Bruce Wayne, si no me da algo. El resto, pasable",
+                "2": "Biografía de un payacho",
+                "3": "Obra maestra, uno de los mejores papeles de Jack Nicholson"
+            }
+        }
+
+      ]
+   }
+}

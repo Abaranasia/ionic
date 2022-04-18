@@ -1,0 +1,165 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: beige;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 20px;
+    font-size: 1.4em;
+    color: brown;
+    border-bottom: 2px solid brown;
+}
+
+nav {
+    background-color: burlywood;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    ;
+}
+
+#menu {
+    margin: 0px;
+    font-size: 1.2em;
+    padding: 15px;
+    text-align: right;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 15px;
+}
+#menu li#cart {
+	margin-left:52vw;
+}
+
+main {
+    padding: 10px;
+    position: relative;
+}
+
+h1 {
+    margin-top: 0px;
+}
+
+a {
+    color: brown;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+#productos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.prod {
+    background-color: beige;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.prod:hover {
+    cursor: pointer;
+}
+
+.prod img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
+.prod h3,
+.datos h3,
+#modal h3 {
+    font-size: 0.8em;
+}
+
+.prod p,
+.datos p,
+#modal p {
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+.prod h4,
+.datos h4,
+#modal h4 {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: right;
+}
+
+#modal {
+    background-color: burlywood;
+    margin: 10px;
+    padding: 10px;
+    width: 650px;
+    overflow: auto;
+}
+
+.datos img,
+#modal img {
+    float: left;
+    object-fit: cover;
+    height: 400px;
+    max-width: 50%;
+    margin-right: 15px;
+}
+
+#modal {
+    width: 700px;
+    height: 450px;
+    position: fixed;
+    top: 160px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#carrito {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+#carrito img {
+    float: left;
+    object-fit: cover;
+    height: 80px;
+    width: 80px;
+    margin-right: 15px;
+}
+
+.compra {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: burlywood;
+    height: 80px;
+    padding: 3px;
+    padding: 5px 25px;
+    margin: 5px 0px;
+    align-items: center;
+}
+
+.compra h4 {
+    max-width: 550px;
+    flex: auto;
+}

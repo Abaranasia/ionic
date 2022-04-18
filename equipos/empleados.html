@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Equipos de desarrollo</title>
+ 
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="cabecera">Equipo de desarrollo</h1>
+        <nav><p id="añadir">Añadir empleado</p></nav>
+        <main>
+            <div id="ingenieros">
+                <h2>Ingenieros</h2>
+                <div id="ingList">
+					<!-- <div class="usuario"> </div> -->
+				</div>
+            </div>
+            <div id="webDev">
+                <h2>Desarrolladores web</h2>
+                <div id="webList">
+					<!-- <div class="usuario"> </div> -->
+				</div>
+            </div>
+            <div id="appDev">
+                <h2>Desarrolladores app</h2>
+                <div id="appList">
+					<!-- <div class="usuario"> </div> -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="modalForm"> <!-- Formulario para añadir nuevos usuarios -->
+        <h3>Añadir empleado</h3>
+        <input type="text" id="nombre" placeholder="nombre">
+        <input type="text" id="apellido" placeholder="apellido">
+        <input type="text" id="email" placeholder="email">
+        <label>Especialidad: </label>
+        <select id="especialidad">
+            <option value="engineer">engineer</option>
+            <option value="web">web</option>
+            <option value="app">app</option>
+          </select>
+        <input type="text" id="avatar" placeholder="avatar URL">
+        <input type="button" onClick="addUser()" value="añadir">
+        <span id="cerrar" onClick="cerrarModalForm()">X</span>
+    </div>
+	
+</body>
+
+<script>    
+    const modalForm = document.getElementById("modalForm");
+
+    const añadir = document.getElementById("añadir");
+    añadir.addEventListener('click', function () {
+        abrirModalForm();
+    });
+
+    const ingList = document.getElementById("ingList");
+    const webList = document.getElementById("webList");
+    const appList = document.getElementById("appList");
+
+    
+	/******** Listar y distribuir empleados ********/ 
+
+	
+	
+	
+	
+	/******** Añadir empleado ********/ 
+    function addUser() { 
+
+    }
+
+	
+	/******** Editar empleado ********/ 
+    function editUser (user) { 
+
+    }
+
+	
+	/******** Borrar  empleado ********/ 
+    function deleteUser (user) { 
+
+    }
+
+	
+	/******** Abrir formulario modal ********/ // Ya definido
+    function abrirModalForm() {
+        modalForm.style.display="block";
+    }
+
+	
+	/******** Cerrar formulario modal ********/ // Ya definido
+    function cerrarModalForm () {
+        modalForm.style.display="none";
+    }
+	
+</script>
+</html>

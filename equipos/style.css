@@ -1,0 +1,133 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+}
+
+nav {
+    background-color:lightslategray;
+    height: 50px;
+    margin: 10px auto;
+    line-height: 47px;
+}
+
+nav #añadir {
+    color: white;
+    text-decoration: none;
+    float:right;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+nav #añadir:hover {
+    color: yellow;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+main>div {
+    background-color:lightsalmon;
+    border: 1px solid black;
+    padding: 5px;
+    align-self: flex-start;
+}
+
+#ingenieros, #webDev, #appDev{
+    width: 32%
+}
+
+#ingList, #webList, #appList {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-evenly;  
+    
+}
+
+.usuario {
+    box-shadow: 9px 9px 5px -5px rgba(87,87,87,1);
+    background-color: white;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;  
+    width: 178px;
+    position: relative;
+    
+}
+p {
+    font-size: 0.8em;
+    margin: 2px 5px;
+}
+
+.usuario img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.usuario button {
+    /*position: absolute;
+    bottom: 5px;
+    right: 5px; */
+	float:right;
+}
+
+
+#webDev {
+    background-color: lightgreen;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;   
+}
+#appDev {
+    background-color: lightblue;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;   
+}
+
+.web>h3, .web>p, .app> h3, .app> p {
+    flex-basis: 100%;
+    margin: 5px;
+}
+
+#modalForm {
+    display: none;
+    background-color:lightslategray;
+    width: 300px;
+    height: 225px;
+    padding: 20px;
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    text-align: center;
+    color: white;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+#modalForm input {
+    display: block;
+    margin: 5px auto;
+    size: 50;
+}
+#cerrar{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-weight: bold;
+}
+
+#cerrar:hover {
+    cursor: pointer;
+    color: yellow;
+}

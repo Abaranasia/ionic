@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NetAgilix</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- slick carousel -->
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+</head>
+
+<body id="home">
+    <header>
+        <h1>NetAgilix Streaming service</h1>
+        <a id="fav" href="favoritas.html">Mis películas favoritas</a>
+    </header>
+
+
+    <main id="portada">
+        <div id="descripcion"></div>
+    </main>
+
+
+    <section id="novedades" class="bandaPeliculas">
+        <h3>Novedades</h3>
+        <div id="novedadesCar"></div>
+    </section>
+
+    <section id="cienciaFiccion" class="bandaPeliculas">
+        <h3>Ciencia Ficción</h3>
+        <div id="cienciaFiccionCar"></div>
+    </section>
+
+    <section id="misterio" class="bandaPeliculas">
+        <h3>Thriller</h3>
+        <div id="misterioCar"></div>
+    </section>
+
+</body>
+<script>
+    /*********************** Código inicial a ejecutar al cargarse la página *********************************/
+
+    /* Importante para construir y definir cada uno de los tres carouseles */
+
+    $(document).ready(function() {
+        $('#novedadesCar').slick({ // Carousel de Novedades
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            arrows: false
+        });
+
+        $('#cienciaFiccionCar').slick({ // Carousel de Ciencia Ficción
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            arrows: false
+        });
+
+        $('#misterioCar').slick({ // Carousel de  Thriller
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            arrows: false
+        });
+    });
+
+
+    var descripcion = document.getElementById("descripcion"); //esta capa está destinada a publicar la ficha de la peli seleccionada
+
+
+    // 1. Accedemos al recurso online https://api.myjson.com/bins/1g57qe o local peliculas.json
+
+    // 2. Rellenamos cada galería llamando a fillGallery ()
+
+
+    //fetch('https://api.myjson.com/bins/1g57qe') // accedemos al recurso
+    fetch('peliculas.json') // accedemos al recurso
+
+    .then(data => data.json()) // descargamos los datos y los convertimos a formato json
+
+    .then(pelis => {
+        var peliculasGal = [];
+        peliculasGal = pelis.peliculas;
+        fillGallery(peliculasGal.novedades, "novedadesCar");
+        fillGallery(peliculasGal.scifi, "cienciaFiccionCar");
+        fillGallery(peliculasGal.thriller, "misterioCar");
+
+    });
+
+
+    function fillGallery(pelis, categoria) {
+        // Envía a cada carousel las películas de la categoría correspondiente
+        var peliculas = [];
+        var carousel = document.getElementById(categoria);
+
+        // aquí se debe recorrer el json de pelis y crear una capa de class="item", dentro de la cual insertar las fotos y una capa span class="titulo" con el titulo
+        peliculas = pelis;
+
+        peliculas.map((peli, i) => {
+            let capa = document.createElement('div');
+            let dataItem = JSON.stringify(peli);
+
+            capa.innerHTML = '<img  src="' + peli.foto + '" onclick=\'showData(' + dataItem + ')\' /><span class="titulo">' + peli.titulo + '</span>';
+
+            capa.classList.add("item");
+
+            // las capas para el carousel deben ser de clase item
+
+            /* La siguiente instrucción es la que necesitamos para insertar cada elemento nuevo en su correspondiente carousel */
+
+            $(carousel).slick('slickAdd', capa);
+        });
+
+
+    }
+
+    function showData(peli) {
+        // Esta función debe ser llamada desde fillGallery()
+        // Muestra la descripción de la película, incluyendo el botón de añadir a favoritos (función addfav() )
+
+        var dataItem = JSON.stringify(peli);
+        descripcion.innerHTML = '<img height="450px" src="' + peli.foto + '" />'
+        descripcion.innerHTML += '<div class="texto"><h2>' + peli.titulo + '</h2><p><b>Dirigida por: </b>' + peli.director + '</p><p><b>Sinopsis:</b> ' + peli.datos + '</p><input type="button" onclick=\'addfav(' + dataItem + ')\' value="añadir a favoritas"/></div>';
+    }
+
+    function addfav(peli) {
+        // Esta función debe ser llamada desde dentro de showData()
+        // Guarda las películas favoritas en localStorage según el patrón: clave=titulo y valor=peli
+
+        localStorage.setItem(peli.titulo, JSON.stringify(peli))
+    }
+</script>
+
+</html>
+
+</html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="casas">
+	
+		<xs:complexType>
+		
+			<xs:sequence>
+				<xs:element name="casa">
+	
+					<xs:complexType>
+		
+						<xs:sequence>
+							<xs:element name="nombrec" type="xs:string" />
+							<xs:element name="blason" type="xs:string" />
+							<xs:element name="lema" type="xs:string" />
+							<xs:element name="asentamiento" type="xs:string" />
+							<xs:element name="region" type="xs:string" />
+							<xs:element name="descripcion" type="xs:string" />
+							<xs:element name="miembros">
+	
+								<xs:complexType>
+		
+									<xs:sequence>
+										<xs:element name="padre" type="xs:string" />
+											<xs:complexType>
+												<xs:attribute name="estado" type="xs:string" />
+											</xs:complexType>
+										<xs:element name="madre" type="xs:string" />
+											<xs:complexType>
+												<xs:attribute name="estado" type="xs:string" />
+											</xs:complexType>
+											
+											<xs:element name="descendientes">
+	
+												<xs:complexType>
+		
+													<xs:sequence>
+														<xs:element name="hijo">
+	
+															<xs:complexType>
+																<xs:attribute name="estado" type="xs:string" />
+																<xs:sequence>
+																	<xs:element name="nombre" type="xs:string" />
+																	<xs:element name="sexo" type="xs:string" />
+																	<xs:element name="legitimidad">
+																	<xs:complexType>
+		
+																		<xs:attribute name="tipo" type="xs:string" />
+													
+																	</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+											
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+								
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="vasallos">
+	
+												<xs:complexType>
+		
+													<xs:sequence>
+														<xs:element name="vasallo">
+	
+															<xs:complexType>
+																<xs:attribute name="estado" type="xs:string" />
+																<xs:sequence>
+																	<xs:element name="nombre" type="xs:string" />
+																	<xs:element name="titulo" type="xs:string" />
+																</xs:sequence>
+											
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+								
+												</xs:complexType>
+											</xs:element>
+									</xs:sequence>
+				
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+				
+					</xs:complexType>
+			
+				</xs:element>
+			</xs:sequence>
+		
+		</xs:complexType>
+	
+	</xs:element>
+
+
+</xs:schema>

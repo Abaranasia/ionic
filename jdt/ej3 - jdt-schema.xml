@@ -1,0 +1,73 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"   version="1.0" xml:lang="es">
+
+<xs:element name="casas" type="casa">
+
+		<xs:complexType name="casa">
+					<xs:sequence>
+						<xs:element name="nombrec" type="xs:string"/>
+						<xs:element name="blason" type="xs:string"/>
+						<xs:element name="lema" type="xs:string"/>
+						<xs:element name="asentamiento" type="xs:string"/>
+						<xs:element name="region" type="xs:string"/>
+						<xs:element name="descripcion" type="xs:string"/>
+						<xs:element name="miembros" type="datosMiembros"/>
+					</xs:sequence>
+				</xs:complexType>
+				
+				<xs:complexType name="datosMiembros">
+					<xs:sequence>
+						<xs:element name="padre" type="xs:string"/>
+						<xs:element name="madre" type="xs:string"/>
+						<xs:element name="descendientes" type="datosDescendientes"/>
+						<xs:element name="vasallos" type="datosVasallos"/>
+					</xs:sequence>
+				</xs:complexType>
+
+				<xs:complexType name="datosDescendientes"/>
+					<xs:sequence>
+						<xs:element name="hijo" type="datosHijo"/>
+							<xs:complexType>
+								<xs:attribute name="estado" type="xs:string" default=""/>
+								<xs:restriction base="xs:string"> 
+									<xs:enumeration value=""/>
+									<xs:enumeration value="&cruz;" />
+								</xs:restriction> 
+							</xs:complexType>
+					</xs:sequence>
+
+				<xs:complexType name="datosHijo">
+					<xs:sequence>
+						<xs:element name="nombre" type="xs:string"/>
+						<xs:element name="sexo" type="xs:string"/>
+						<xs:element name="legitimidad">
+							<xs:complexType>
+								<xs:attribute name="tipo" type="xs:string" default="legitimo"/>
+								<xs:restriction base="xs:string"> 
+									<xs:enumeration value="legitimo"/>
+									<xs:enumeration value="bastardo" />
+								</xs:restriction> 
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+
+				<xs:complexType name="datosVasallos"/>	
+					<xs:sequence>
+						<xs:element name="vasallo" type="datosVasallo"/>
+						<xs:complexType>
+								<xs:attribute name="estado" type="xs:string" default=""/>
+								<xs:restriction base="xs:string"> 
+									<xs:enumeration value=""/>
+									<xs:enumeration value="&cruz;" />
+								</xs:restriction> 
+							</xs:complexType>
+					</xs:sequence>
+					
+				<xs:complexType name="datosVasallo">
+					<xs:sequence>
+						<xs:element name="nombre" type="xs:string"/>
+						<xs:element name="titulo" type="xs:string"/>				
+					</xs:sequence>			 		
+ </xs:complexType>
+</xs:schema>
+	

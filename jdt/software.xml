@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE softwares [
+	
+	<!ELEMENT softwares (software*)>
+	<!ELEMENT software (nombre, version, fabricante, categoria, fechaInstalacion, ubicacion, tipoLicencia, notas)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT version (#PCDATA)>
+	<!ELEMENT fabricante (nombreFab, web)>
+	<!ELEMENT nombreFab (#PCDATA)>
+	<!ELEMENT web (#PCDATA)>
+	<!ELEMENT categoria (#PCDATA)>
+	<!ELEMENT fechaInstalacion (#PCDATA)>
+	<!ELEMENT ubicacion (#PCDATA)>
+	<!ELEMENT tipoLicencia (#PCDATA)>
+	<!ELEMENT notas (#PCDATA)>
+	
+]>
+
+<softwares>
+
+	<software>
+	
+		<nombre></nombre>
+		<version></version>
+		<fabricante>
+			
+			<nombreFab></nombreFab>
+			<web></web>
+			
+		</fabricante>
+		<categoria></categoria>
+		<fechaInstalacion></fechaInstalacion>
+		<ubicacion></ubicacion>
+		<tipoLicencia></tipoLicencia>
+		<notas></notas>
+	
+	</software>
+
+</softwares>

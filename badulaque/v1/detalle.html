@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <h1>Badulaque Yihad</h1>
+        </header>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li>
+                    <a href="carrito.html">Carrito</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div id="detalle">
+
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+    const remoteURL = "https://fakestoreapi.com/products";
+    let detalle = document.getElementById("detalle");
+    let param = window.location.search;
+    let item = param.substr(6, (param.length - 1))
+
+    let datos = [];
+
+    detalle.innerHTML = item,
+
+        fetch(remoteURL + "/" + item)
+        .then(data => data.json())
+        .then(datos => {
+            console.log();
+
+            let producto = document.createElement('div');
+            producto.setAttribute('id', datos.id);
+            producto.className = "datos";
+            producto.addEventListener('click', function() {
+                //    window.location.href = 'detalle.html?item=' + item.id;
+            });
+
+            let foto = document.createElement('img');
+            foto.setAttribute('src', datos.image);
+            producto.appendChild(foto);
+
+            let titulo = document.createElement('h2');
+            titulo.innerText = datos.title;
+            producto.appendChild(titulo);
+
+            let descripcion = document.createElement('p');
+            descripcion.innerText = datos.description;
+            producto.appendChild(descripcion);
+
+            let categoria = document.createElement('p');
+            categoria.innerHTML = "<strong>Categorías: </strong>" + datos.category;
+            producto.appendChild(categoria);
+
+            let precio = document.createElement('h4');
+            precio.innerText = datos.price + "€";
+            producto.appendChild(precio);
+
+
+            detalle.appendChild(producto);
+        })
+</script>
+
+</html>

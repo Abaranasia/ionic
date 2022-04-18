@@ -1,0 +1,70 @@
+#container {
+    width: 98%;
+    margin: 0px auto;
+}
+
+header {
+    background-color: lightslategrey;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 25px;
+    color: white
+}
+
+main {
+    background-color: cornsilk;
+}
+
+.creador {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.creador>div {
+    border: 1px solid gray;
+    min-width: 200px;
+    min-height: 200px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#baseDiv {
+    background-color: wheat;
+}
+
+#tomateDiv {
+    background-color: tomato;
+}
+
+#quesoDiv {
+    background-color: lightgoldenrodyellow;
+}
+
+#ingredientesDiv {
+    background-color: lightpink;
+}
+
+.resultado {
+    background-color: whitesmoke;
+    width: 400px;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+#crear {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    font-size: 2em;
+}
+
+#precioDiv {
+    background-color: yellow;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2em;
+    padding: 0px 25px;
+    text-align: right;
+}

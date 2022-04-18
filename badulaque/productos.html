@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badulaque Plus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <a href="productos.html">
+                <h1>Badulaque Plus</h1>
+            </a>
+        </header>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="productos.html">Todo</a>
+                </li>
+				<li>
+                    <a href="#" onClick="mostrarProductos('electronics')">Electrónica</a>
+                </li>
+				<li>
+                    <a href="#" onClick="mostrarProductos('jewelery')">Joyería</a>
+                </li>
+				<li>
+                    <a href="#" onClick="mostrarProductos('men\'s clothing')">Moda hombre</a>
+                </li>
+				<li>
+                    <a href="#" onClick="mostrarProductos('women\'s clothing')">Moda mujer</a>
+                </li>
+                <li id="cart">
+                    <a href="carrito.html">Carrito</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Productos</h2>
+            <div id="productos"></div>
+
+
+            <div id="modal" style="display:none;">
+                <button class="close" onClick="cerrar()">x</button>
+                <div id="detalle"></div>
+            </div>
+
+
+        </main>
+
+    </div>
+</body>
+<script>
+    const modal = document.getElementById("modal");
+    const detalle = document.getElementById("detalle");
+
+    const APIURL = "https://fakestoreapi.com/products";
+    let divProductos = document.getElementById('productos');
+    let productos = [];
+	
+	mostrarProductos();
+
+	function mostrarProductos (cat) {
+		let remoteURL = APIURL;	
+		
+		if (cat) {
+			remoteURL+="/category/"+cat;
+			divProductos.innerHTML="";
+			console.log(remoteURL)
+		}
+		
+		fetch(remoteURL)
+			.then(data => data.json())
+			.then(items => {
+				productos = items;
+				console.log(items);
+				productos.map((item, i) => {
+					let producto = document.createElement('div');
+					producto.setAttribute('id', item.id);
+					producto.addEventListener('click', function() {
+						mostrarDetalle(item.id);
+					});
+
+					producto.className = "prod";
+
+					let foto = document.createElement('img');
+					foto.setAttribute('src', item.image);
+					producto.appendChild(foto);
+
+					let titulo = document.createElement('h3');
+					titulo.innerText = item.title;
+					producto.appendChild(titulo);
+
+					let precio = document.createElement('h4');
+					precio.innerText = item.price + "€";
+					producto.appendChild(precio);
+
+
+					divProductos.appendChild(producto);
+				})
+			});
+	}
+
+
+    function mostrarDetalle(item) { // Presenta los detalles de un producto dentro de la capa modal, inicialmente escondida 
+        modal.style.display = "block";
+        fetch(APIURL + "/" + item)
+            .then(data => data.json())
+            .then(datos => {
+                let producto = document.createElement('div');
+                producto.setAttribute('id', datos.id);
+
+                let foto = document.createElement('img');
+                foto.setAttribute('src', datos.image);
+                producto.appendChild(foto);
+
+                let titulo = document.createElement('h2');
+                titulo.innerText = datos.title;
+                producto.appendChild(titulo);
+
+                let descripcion = document.createElement('p');
+                descripcion.innerText = datos.description;
+                producto.appendChild(descripcion);
+
+                let categoria = document.createElement('p');
+                categoria.innerHTML = "<strong>Categorías: </strong>" + datos.category;
+                producto.appendChild(categoria);
+
+                let precio = document.createElement('h4');
+                precio.innerText = datos.price + "€";
+                producto.appendChild(precio);
+
+                let comprar = document.createElement('button');
+                comprar.innerText = "comprar";
+                producto.addEventListener('click', function() {
+                    addCarrito(datos);
+                    alert("se ha añadido al carrito el producto: " + datos.id);
+                    cerrar();
+                });
+
+                producto.appendChild(comprar);
+
+                detalle.appendChild(producto);
+            })
+    }
+
+
+    function addCarrito(item) {
+        // Esta función debe ser llamada desde dentro el botón comprar
+        // Guarda los productos comprados en localStorage según el patrón: clave=id y valor=item completo
+
+        localStorage.setItem(item.id, JSON.stringify(item))
+    }
+
+
+    function cerrar() { // Proporcionada 
+        modal.style.display = "none";
+        detalle.innerHTML = "";
+    }
+</script>
+
+</html>

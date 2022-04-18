@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Discos épicos</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script>
+		
+		
+		function mostrarForm() { /* no modificar */
+			var formulario=document.getElementById("formulario");
+			formulario.style.display="block";
+		}
+		
+		function cancelar () {  /* no modificar */
+			var formulario=document.getElementById("formulario");
+			formulario.style.display="none";			
+			}
+		
+	</script>
+</head>
+<body>
+
+	<div id="menu"> <!-- Menú superior: no modificar -->
+		<h2>Discos épicos DI</h2>
+		<button type="button" onclick="mostrarForm()" >Añadir nuevo disco</button>
+	</div>
+	
+	<div id="container">
+		<h1 id ="cabecera"></h1>
+		<div id ="discos"></div>
+
+		
+		<!-- Formulario de inserción: no modificar -->
+		<div id="formulario">
+			<h3>Añadir nuevo juego</h3>
+		<input type="text" id="titulo" placeholder="Título"><br>
+		<input type="text" id="grupo" placeholder="Grupo"><br>
+		<input type="text" id="estilo" placeholder="Estilo"><br>
+		<input type="text" id="lanzamiento" placeholder="Año de lanzamiento"><br>
+		<input type="text" id="duracion" placeholder="Duración"><br>
+		<input type="text" id="video" placeholder="Vídeo representativo"><br>
+		<textarea id="descripcion" placeholder="Descripción"></textarea>
+			<div id="formBottom">
+				<div>
+					<button type="button" onclick="insertar()">Insertar</button>
+					<button type="button" onclick="cancelar()">Cancelar</button>
+				</div>
+			</div>
+		</div>
+		<!-- Fin Formulario de inserción -->
+
+	</div>	
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBh66bjDw-NRodfWpzFcX-R34Dm6mpFZUg",
+    authDomain: "discosdi-11fc8.firebaseapp.com",
+    databaseURL: "https://discosdi-11fc8.firebaseio.com",
+    projectId: "discosdi-11fc8",
+    storageBucket: "discosdi-11fc8.appspot.com",
+    messagingSenderId: "410203227275"
+
+
+	  };
+	
+  firebase.initializeApp(config);
+  
+  var lista= document.getElementById("lista");
+     
+  var referencia = firebase.database().ref(); //apuntamos a nuestra BBDD
+  var refDiscos= referencia.child('Discos');
+  
+  
+  //refMensaje.on('value', snap=> cabecera.innerText = snap.val()); //presentamos el contenido del objeto Mensaje
+  
+  refDiscos.on('child_added', snap=> {
+		const caja =document.createElement('div'); // referencia a los elementos div
+		const h2 =document.createElement('h2'); // referencia a los elementos h2
+		const botonBorrar =document.createElement('input'); // referencia a los elementos button
+		caja.className ="disco";
+		caja.id=snap.key;
+		
+		h2.innerText= snap.key;
+		discos.appendChild(caja);
+		caja.appendChild(h2);
+		
+		var refProp = refDiscos.child(snap.key);
+		
+		refProp.on('child_added', snap=> {
+			const p =document.createElement('p'); // referencia a los elementos p
+			const img =document.createElement('img'); // referencia a los elementos img
+			
+			if (snap.key=="Cubierta") {
+				if (snap.val()!="") {
+				img.src= snap.val();
+				}else {img.src="images/no-image.jpg";}
+				
+				caja.appendChild(img);
+			}else if (snap.key=="Video") {
+				p.innerHTML= "<strong>"+snap.key+"</strong>: <a href='"+snap.val()+"'>"+snap.val()+"</a>";
+				caja.appendChild(p);
+			}else {
+				p.innerHTML= "<strong>"+snap.key+"</strong>: "+snap.val();
+				caja.appendChild(p);
+			}
+		})
+		//creando el botón de borrado
+		botonBorrar.id=snap.key;
+		botonBorrar.type="button";
+		botonBorrar.value="Eliminar disco";
+		botonBorrar.onclick =function () {console.log(this.id); refDiscos.child(this.id).remove();location.reload()};
+		caja.appendChild(botonBorrar);
+  });
+  
+  
+  function insertar() {
+  	var formulario=document.getElementById("formulario");
+	
+	var titulo= document.getElementById("titulo").value;
+	var nuevoDisco= {
+			"Cubierta": "",
+			"Grupo": document.getElementById("grupo").value,
+			"Estilo": document.getElementById("estilo").value,
+			"Lanzamiento": document.getElementById("lanzamiento").value,
+			"Duracion": document.getElementById("duracion").value,
+			"Descripción": document.getElementById("descripcion").value,
+			"Video": document.getElementById("video").value
+		}
+			
+	console.log(nuevoDisco);
+	//var nuevo= refDiscos.set(nuevoJuego);
+	var nuevo= refDiscos.child(titulo).update(nuevoDisco);
+	console.log(nuevo);
+	
+	formulario.style.display="none";
+	//var nuevo= document.getElementById("nuevoEstilo").value;
+	//var newStyle=refEstilos.push(nuevo);
+	}
+  
+</script>
+</html>

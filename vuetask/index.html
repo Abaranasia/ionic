@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>Vue & Firebase</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+   <style>
+	   body {
+		   background-color: slategray ;
+		   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		   color: white;
+		   padding: 30px;
+	   }
+
+	   h1 {
+		   font-size: 2rem;
+	   }
+	   .tareas{
+		   background-color: cadetblue;
+		   border-radius: 5px;
+		   margin: 10px;
+		   padding: 10px;
+		   font-size: 1rem;
+	   }
+	   .tareas li {
+		   margin: 5px 0px;
+	   }
+
+   </style>
+</head>
+<body>
+  <div id="app" :key="appKey">
+    <h1> {{ titulo }}</h1>
+	<h3>{{ subtitulo }}</h3>
+	<form @submit.prevent="addTarea">
+		<input v-model="nomTarea" type="text" id="nombre" placeholder="nombre de la tarea"/>
+		<input v-model="descTarea" type="text" id="tarea" placeholder="descripción de la tarea"/>
+		<input v-model="dateTarea" type="datetime" id="fecha" />
+		<input type="submit" value="Añadir"/>
+	</form>
+	<hr>
+	<div class="tareas">
+		<ul>
+			<li v-for="tarea in misTareas" :key="`${appKey} - ${tarea.id}`" :id="`${appKey} - ${tarea.id}`">
+				<strong>{{ tarea.data.nombre }}</strong> - {{ tarea.data.tarea }} - ( {{ tarea.data.fecha }})
+				<input @click="actualizaTarea(tarea.id)" type="button" value="up" />
+				<input @click="borraTarea(tarea.id)" type="button" value="-" />
+				
+			</li>
+		</ul>
+	</div>
+  </div>
+
+  <script>
+  	  const FBConfig = { // configuración de Firebase
+		apiKey: "AIzaSyCafQ7L93xRhEHYP8KeMYwcifIjmViTrt4",
+		authDomain: "di1718-95d48.firebaseapp.com",
+		databaseURL: "https://di1718-95d48.firebaseio.com",
+		projectId: "di1718-95d48",
+		storageBucket: "di1718-95d48.appspot.com",
+		messagingSenderId: "120500355593",
+		appId: "1:120500355593:web:f282e65599f2f1f8fbeed8"
+	  };
+	  
+	firebase.initializeApp(FBConfig); //inicialización de Firebase con mi configuración
+	const db= firebase.firestore(); //Acceso a firestore
+	const tareas= db.collection('tareas'); //acceso a mi colección "tareas" en FB
+	
+    var app = new Vue({
+      el: '#app',
+      data: {
+		appKey: 0,
+		titulo:'Task list',
+        subtitulo: 'Ejemplo de acceso a Firebase con Vue.js',
+		nomTarea:null,
+		descTarea: null,
+		dateTarea: '10/10/2020',
+		misTareas: []
+      },
+	  
+	  methods: {
+		  leeTareas() {
+			this.misTareas = [];
+			tareas.get()
+			.then (res => {
+				res.docs.map(item => {
+					this.misTareas.push({id:item.id, data: item.data()})
+				});
+				console.log (this.misTareas);
+				console.log (this.appKey)
+			})
+		  },
+	  
+		  addTarea() {
+			tareas.add({
+				nombre: this.nomTarea,
+				tarea: this.descTarea, 
+				fecha: this.dateTarea
+			})
+			//.then (()=> this.$mount()) // recarga el listado tras añadir un elemento nuevo
+			.then ( () =>this.reRender())
+		  },
+		  
+		  borraTarea(id) {
+			tareas.doc(id).delete()
+			//.then (()=> this.$mount()) //recarga el listado tras un borrado
+			.then ( () =>this.reRender())
+		  },
+		  
+		  actualizaTarea (id) {
+			tareas.doc(id).set({nombre:this.nomTarea, tarea: this.descTarea, fecha: this.dateTarea})
+			//.then (()=> this.$forceUpdate()) //recarga el listado tras la actualización
+			.then ( () =>this.reRender())
+		  },
+		  
+		  reRender() {
+				//this.appKey += 1;
+				this.leeTareas();
+
+		  }
+	  },
+	  
+	  mounted() { // Presenta en montaje el listado de tareas
+			this.leeTareas();
+		}
+    })
+  </script>
+</body>
+</html>

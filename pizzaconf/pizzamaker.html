@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza configurator</title>
+</head>
+<link rel="stylesheet" href="pizzastyle.css">
+<script>
+    const bases = {
+        "normal": 2.00,
+        "fina": 3.50,
+        "pan": 4.00,
+        "roll": 5.00,
+        "spicy": 4.00
+    };
+    const tomates = {
+        "sin tomate": 0,
+        "tomate natural": 2.00,
+        "tomate light": 2.50,
+        "tomate especiado": 3.00
+    };
+    const quesos = {
+        "chedar": 1.50,
+        "emmental": 1.50,
+        "rockeford": 2.50,
+        "cabrales": 3.00
+    }
+    const ingredientes = {
+        "mozzarela": 1.50,
+        "mozzarela picante": 1.75,
+        "extra de queso": 1.50,
+        "pepperoni": 1.50,
+        "bacon": 2.00,
+        "piña": 5.00
+    };
+</script>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>Pizza Configurator 1.0</h1>
+        </header>
+
+        <main>
+            <form name="creador">
+                <div class="creador">
+                    <div id="baseDiv">
+                        <h3>Elige tu base:</h3>
+                        <!-- A elegir uno -->
+                    </div>
+                    <div id="tomateDiv">
+                        <h3>Elige el tomate:</h3>
+                        <!-- A elegir uno -->
+                    </div>
+                    <div id="quesoDiv">
+                        <h3>Elige el queso:</h3>
+                        <!-- Tantos como se desee -->
+                    </div>
+                    <div id="ingredientesDiv">
+                        <h3>Elige tus ingredientes:</h3>
+                        <!-- Tantos como se desee -->
+                    </div>
+                </div>
+            </form>
+
+            <div><input id="crear" type="button" onClick="crearPizza()" value="Crear"></div>
+            <div class="resultado">
+                <h2>Tu pizza contiene lo siguiente:</h2>
+                <div id="resDiv">
+
+                </div>
+                <div id="precioDiv">
+                    <h4>Precio total:</h4>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+    let baseDiv = document.getElementById("baseDiv");
+    let tomateDiv = document.getElementById("tomateDiv");
+    let quesoDiv = document.getElementById("quesoDiv");
+    let ingredientesDiv = document.getElementById("ingredientesDiv");
+    let resDiv = document.getElementById("resDiv");
+    let precioDiv = document.getElementById("precioDiv");
+
+    listarBase();
+    listarTomate();
+    listarQueso();
+    listarIngredientes();
+
+    /**** BASES ****/
+    function listarBase() {
+        let selectB = document.createElement("select");
+        for (let base in bases) {
+            let opcion = document.createElement("option");
+            opcion.innerText = base + " (" + bases[base] + "€)";
+            opcion.value = bases[base];
+            opcion.id = base;
+            selectB.appendChild(opcion)
+        }
+        selectB.id = "listaB";
+        baseDiv.appendChild(selectB);
+    }
+
+    /**** TOMATES ****/
+    function listarTomate() {
+        let selectT = document.createElement("select");
+        for (let tom in tomates) {
+            let opcion = document.createElement("option");
+            opcion.innerText = tom + " (" + tomates[tom] + "€)";
+            opcion.value = tomates[tom];
+            opcion.id = tom;
+            selectT.appendChild(opcion)
+        }
+        selectT.id = "listaT";
+        tomateDiv.appendChild(selectT);
+    }
+
+    /**** QUESOS ****/
+    function listarQueso() {
+        for (let queso in quesos) {
+            let checkbox = document.createElement("input");
+            let label = document.createElement("label");
+            let br = document.createElement("br");
+            checkbox.type = "checkbox";
+            checkbox.name = "quesos";
+            checkbox.className = "listaQ";
+            checkbox.id = queso;
+
+            label.innerText = queso + " (" + quesos[queso] + "€)";
+            checkbox.value = quesos[queso];
+            quesoDiv.appendChild(checkbox);
+            quesoDiv.appendChild(label);
+            quesoDiv.appendChild(br);
+        }
+    }
+
+    /**** INGREDIENTES ****/
+    function listarIngredientes() {
+        for (let ing in ingredientes) {
+            let checkbox = document.createElement("input");
+            let label = document.createElement("label");
+            let br = document.createElement("br");
+            checkbox.type = "checkbox";
+            checkbox.name = "ingredientes";
+            checkbox.className = "listaI";
+            checkbox.id = ing;
+
+            label.innerText = ing + " (" + ingredientes[ing] + "€)";
+            checkbox.value = ingredientes[ing]
+            ingredientesDiv.appendChild(checkbox);
+            ingredientesDiv.appendChild(label);
+            ingredientesDiv.appendChild(br);
+        }
+    }
+
+    function crearPizza() {
+        let precioTotal = 0;
+        let miPizza = "";
+
+        let precioBase = document.getElementById('listaB'); //Calculo Base
+        precioTotal += parseFloat(precioBase.value);
+        miPizza += "<p><b>Base</b> " + precioBase.options[precioBase.selectedIndex].id + " (+" + precioBase.value + "€)</p>";
+
+        let precioTom = document.getElementById('listaT'); //Calculo Tomate
+        precioTotal += parseFloat(precioTom.value);
+        miPizza += "<p><b>Tomate</b> " + precioTom.options[precioTom.selectedIndex].id + " (+" + precioTom.value + "€)</p>";
+
+        let listaQ = document.getElementsByClassName('listaQ'); //Calculo Quesos
+        for (let q in listaQ) {
+
+            if (listaQ[q].checked) {
+                precioTotal += parseFloat(listaQ[q].value);
+                miPizza += "<p><b>Queso</b> " + listaQ[q].id + " (+" + listaQ[q].value + "€)</p>";
+            }
+        }
+
+        let listaI = document.getElementsByClassName('listaI'); //Calculo Quesos
+        for (let ing in listaI) {
+
+            if (listaI[ing].checked) {
+                precioTotal += parseFloat(listaI[ing].value);
+                miPizza += "<p><b>Ingrediente</b> " + listaI[ing].id + " (+" + listaI[ing].value + "€)</p>";
+            }
+        }
+
+        //Calculo total
+        resDiv.innerHTML = miPizza;
+        precioDiv.innerHTML = "<h4>Precio total de tu pizza: " + precioTotal + "€</h4>"
+    }
+</script>
+
+</html>

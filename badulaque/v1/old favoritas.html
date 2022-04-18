@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header,
+        footer {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: linear-gradient(90deg, rgba(150, 123, 27, 1) 0%, rgba(97, 121, 9, 1) 55%, rgba(9, 199, 99, 1) 100%);
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            margin: 10px 0px;
+            color: white
+        }
+        
+        a {
+            color: white
+        }
+        
+        a:hover {
+            color: yellow;
+        }
+        
+        #favoritas {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+        
+        .caja {
+            box-sizing: border-box;
+            width: 310px;
+            height: 210px;
+            padding: 5px;
+            margin: 5px;
+        }
+        
+        .caja img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Mis imágenes favortias</h2>
+        <p><a href="picsum.html">home</a></p>
+    </header>
+    <main>
+        <div id="favoritas"></div>
+    </main>
+    <footer>
+        <h5>Actividad exclusiva para el examen de la primera evaluación de la asignatura DWC (noviembre 2020)</h5>
+    </footer>
+</body>
+<script>
+    var favoritas = document.getElementById("favoritas");
+
+    if (localStorage.length > 0) {
+        for (let i = 0; i < localStorage.length; i++) {
+            let cajaFav = document.createElement('div');
+            cajaFav.className = "caja";
+
+            let foto = JSON.parse(localStorage.getItem(localStorage.key(i)));
+            console.log(foto);
+            cajaFav.id = foto.id;
+
+            let imagen = document.createElement('img');
+            imagen.src = foto.download_url + ".jpg";
+            cajaFav.appendChild(imagen);
+            favoritas.appendChild(cajaFav);
+
+            cajaFav.addEventListener('click', function() {
+                let borrar = confirm("¿Eliminar de favoritos?");
+                if (borrar) {
+                    localStorage.removeItem(foto.id);
+                    //favoritas.removeChild(foto.id);
+                    document.getElementById(foto.id).remove();
+                }
+            })
+        }
+    } else {
+        favoritas.innerHTML = "<h4>No hay imágenes favoritas</h4>"
+    }
+</script>
+
+</html>

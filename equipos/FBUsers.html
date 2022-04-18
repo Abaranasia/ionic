@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Equipos de desarrollo</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+<link rel="stylesheet" href="style.css">
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCafQ7L93xRhEHYP8KeMYwcifIjmViTrt4",
+    authDomain: "di1718-95d48.firebaseapp.com",
+    databaseURL: "https://di1718-95d48.firebaseio.com",
+    projectId: "di1718-95d48",
+    storageBucket: "di1718-95d48.appspot.com",
+    messagingSenderId: "120500355593",
+    appId: "1:120500355593:web:f282e65599f2f1f8fbeed8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="cabecera">Equipo de desarrollo</h1>
+        <nav><p id="añadir">Añadir empleado</p></nav>
+        <main>
+            <div id="ingenieros">
+                <h2>Ingenieros</h2>
+                <div id="ingList">
+					<!-- <div class="usuario"> </div> -->
+				</div>
+            </div>
+            <div id="webDev">
+                <h2>Desarrolladores web</h2>
+                <div id="webList">
+					<!-- <div class="usuario"> </div> -->
+				</div>
+            </div>
+            <div id="appDev">
+                <h2>Desarrolladores app</h2>
+                <div id="appList">
+					<!-- <div class="usuario"> </div> -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="modalForm"> <!-- Formulario para añadir nuevos usuarios -->
+        <h3>Añadir empleado</h3>
+        <input type="text" id="nombre" placeholder="nombre">
+        <input type="text" id="apellido" placeholder="apellido">
+        <input type="text" id="email" placeholder="email">
+        <label>Especialidad: </label>
+        <select id="especialidad">
+            <option value="engineer">engineer</option>
+            <option value="web">web</option>
+            <option value="app">app</option>
+          </select>
+        <input type="text" id="avatar" placeholder="avatar URL">
+        <input type="button" onClick="addUser()" value="añadir">
+        <span id="cerrar" onClick="cerrarModalForm()">X</span>
+    </div>
+	
+</body>
+
+<script>    
+    const modalForm = document.getElementById("modalForm");
+
+    const añadir = document.getElementById("añadir");
+    añadir.addEventListener('click', function () {
+        abrirModalForm();
+    });
+
+    const ingList = document.getElementById("ingList");
+    const webList = document.getElementById("webList");
+    const appList = document.getElementById("appList");
+
+    const referencia = firebase.database().ref(); // ref a root
+    let usuarios = [];
+
+    let listado= document.createElement('select');
+    
+    var refUsers= referencia.child('usuarios'); // ref de usuarios
+
+    refUsers.on('child_added', snap => { // Recorre los empleados disponibles
+        let userDiv = document.createElement('div');
+        
+        usuarios= snap.val();
+        userDiv.className="usuario";
+        userDiv.setAttribute('id', snap.key);
+
+        userDiv.innerHTML='<img src="'+usuarios.avatar+'"/>';
+        userDiv.innerHTML+= '<h4>'+usuarios.first_name+' '+usuarios.last_name+'</h4>'
+        userDiv.innerHTML+= '<p>'+usuarios.email+'</p>';
+        userDiv.innerHTML+= '<p><b>Especialidad:</b> '+usuarios.specialty+'</p>';        
+        
+        
+		let borrar =document.createElement('button'); //Botón borrar empleado
+        borrar.innerText="X";
+        borrar.addEventListener('click', function () {
+            deleteUser(snap.key); 
+        })
+        userDiv.appendChild(borrar);
+		
+		
+        let editar =document.createElement('button'); //Botón editar empleado
+        editar.innerText="editar";
+        editar.addEventListener('click', function () {
+            editUser(snap); 
+        })
+        userDiv.appendChild(editar);
+
+		
+        if (usuarios.specialty=="web"){ // decidir especialidad
+            webList.appendChild(userDiv);
+
+        }else if (usuarios.specialty=="app"){
+            appList.appendChild(userDiv);
+
+        }else {
+            ingList.appendChild(userDiv);
+            }       
+    })
+
+	
+	/******** Añadir empleado ********/ 
+    function addUser() { 
+        let empleado= {
+            "email": email.value,
+            "first_name": nombre.value,
+            "last_name": apellido.value,
+            "specialty": especialidad.value,
+            "avatar": avatar.value
+        }
+        refUsers.push(empleado)
+
+        cerrarModalForm();
+    }
+
+	
+	/******** Editar empleado ********/ 
+    function editUser (user) { 
+		console.log (user.key)
+		let nuevaEspecialidad = prompt("introduce la nueva especialidad", user.val().specialty);	
+		if (nuevaEspecialidad){
+			refUsers.child(user.key).update({"specialty":nuevaEspecialidad}); 
+			location.reload();
+			}
+    }
+
+	
+	/******** Borrar  empleado ********/ 
+    function deleteUser (userID) { 
+		 refUsers.child(userID).remove(); 
+		 location.reload();
+    }
+
+	
+	/******** Abrir formulario modal ********/ // Ya definido
+    function abrirModalForm() {
+        modalForm.style.display="block";
+    }
+
+	
+	/******** Cerrar formulario modal ********/ // Ya definido
+    function cerrarModalForm () {
+        modalForm.style.display="none";
+    }
+	
+</script>
+</html>

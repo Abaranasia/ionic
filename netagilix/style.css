@@ -1,0 +1,119 @@
+        body {
+            background-color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        
+        header {
+            position: fixed;
+            z-index: 10;
+            height: 80px;
+            top: 0px;
+            width: 100%;
+            border-bottom: 1px solid gray;
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+        }
+        
+        h1 {
+            font-size: 2.3em;
+        }
+        
+        a:link, a:visited {
+            margin-right: 40px;
+            margin-top: 40px;
+            color: white;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: orange;
+            text-decoration: underline;
+        }
+        
+        #home main {
+            position: fixed;
+            z-index: 10;
+            height: 480px;
+            width: 100%;
+            top: 85px;
+        }
+
+        #mispelis main {
+            
+            margin-top: 85px;
+        }
+        
+        #descripcion {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        
+        #descripcion .texto {
+            width: 60%;
+            text-align: justify;
+        }
+        
+        .bandaPeliculas {
+            width: 100%;
+            margin: 0px auto;
+        }
+        #novedades {
+            margin-top: 530px;
+        }
+        
+        .item {
+            width: 325px;
+            height: 180px;
+            box-sizing: border-box;
+            border: 1px solid gray;
+            position: relative; 
+        }
+        .item img {
+            width: 320px;
+            height: 180px;
+
+            object-fit: cover;
+            position: relative;
+        }
+        
+        .titulo {
+            position: absolute;
+            bottom: 10px;
+            left: 0px;
+            padding-left: 15px;
+            font-size: 1.6em;
+            color: yellow;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 96%;
+        }
+
+
+        #mispelis footer {
+            
+            margin-top: 120px;
+            background-color: black;
+            width: 100%;
+            color: white;
+        }
+
+        #favoritas {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        
+        }
+        
+        .fav { /* clase para la capa de cada peli favorita */
+            width: 450px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+            padding: 10px;
+            justify-content: space-around;
+        }

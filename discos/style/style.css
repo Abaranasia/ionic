@@ -1,0 +1,115 @@
+* {
+		font-family: Verdana;
+		
+	}
+	body {
+		background-color: #89AFC8;
+	}
+	h1, h3 {
+		text-align:center
+	}
+
+	
+	#container {
+		width: 1000px;
+		margin: 70px auto;
+		position: relative;
+		
+	}
+	#discos {
+		
+		margin: 10px;
+		padding: 10px;
+	
+	}
+	
+	.disco {
+		position: relative;
+		font-family: Verdana;
+		font-size: 0.8em;
+		background-color: #BED6E6;
+		margin: 10px;
+		padding: 10px;
+		min-height: 200px;
+	}
+	.disco p {
+		width: 700px;
+		text-align:justify;
+		font-size:11px;
+	}
+	
+	img {
+		position:absolute;
+		top: 15px;
+		right: 15px;
+		width: 200px;
+		height: 200px;
+		
+
+	}
+	
+	#formulario {
+		display:none;
+		position: fixed;
+		width: 1000px;
+		height: 470px;
+		background-color: #BED6E6;
+		top: 200px;
+		margin: 0px auto;
+		box-shadow: 5px 6px 6px 5px rgba(0, 0, 0, 0.5);
+	}
+
+	#formulario h2{
+		margin: 10px;
+	}
+	
+	#formulario input {
+		width: 940px;
+		margin: 5px;
+		margin-left: 25px;
+		font-size: 12px;
+	}
+	
+	#formulario textarea {
+		width: 940px;
+		margin: 5px;
+		margin-left: 25px;
+		height: 150px;
+		font-size: 12px;
+		resize: none;
+	}
+	
+	#formBottom {
+		position: absolute;
+		bottom: 0px;
+		height: 40px;
+		width: 100%;
+		background-color: grey;
+	}
+
+	#formBottom div{
+		margin: 0px auto;
+		width: 180px;
+		padding: 5px;
+	}
+	#menu {
+		position: fixed;
+		left:0px;
+		top: 0px;
+		height: 50px;
+		box-sizing: border-box;
+		padding: 10px;
+		width: 100%;
+		background-color: rgba(80, 80, 80, 0.7);
+		z-index: 2;
+		
+	}
+	#menu *{
+		float: right;
+		margin: 5px 10px;
+	}
+	#menu h2 {
+		float:left;
+		margin: 0px 10px;
+		color: white;
+	}

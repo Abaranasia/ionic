@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <h1>Badulaque Yihad</h1>
+        </header>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li>
+                    <a href="carrito.html">Carrito</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Productos</h2>
+            <div id="productos">
+
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+    const remoteURL = "https://fakestoreapi.com/products";
+    let divProductos = document.getElementById('productos');
+    let productos = [];
+
+    fetch(remoteURL)
+        .then(data => data.json())
+        .then(items => {
+            productos = items;
+            console.log(items);
+            productos.map((item, i) => {
+                let producto = document.createElement('div');
+                producto.setAttribute('id', item.id);
+                producto.addEventListener('click', function() {
+                    window.location.href = 'detalle.html?item=' + item.id;
+                });
+
+                /* 
+                document.addEventListener("click", function(){
+  document.getElementById("demo").innerHTML = "Hello World";
+}); 
+                */
+
+                producto.className = "prod";
+
+                let foto = document.createElement('img');
+                foto.setAttribute('src', item.image);
+                producto.appendChild(foto);
+
+                let titulo = document.createElement('h3');
+                titulo.innerText = item.title;
+                producto.appendChild(titulo);
+
+                let precio = document.createElement('h4');
+                precio.innerText = item.price + "€";
+                producto.appendChild(precio);
+
+
+                divProductos.appendChild(producto);
+            })
+        });
+</script>
+
+</html>

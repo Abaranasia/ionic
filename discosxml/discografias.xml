@@ -1,0 +1,206 @@
+<?xml version="1.0"  encoding="ISO-8859-1" ?> 
+	
+<!DOCTYPE casas [
+	<!ENTITY cruz "&#10013;">
+]>
+
+<?xml-stylesheet type="text/xsl" href="estilo.xsl"?>
+<grupos>
+	<grupo idg="1">
+		<nombreG>Nirvana</nombreG>
+		<nacionalidad>EEUU</nacionalidad>
+		<idioma>Inglés</idioma>
+		<estilo>Grunge, Rock</estilo>
+		<actividad>1987-1994</actividad>
+		<componentes>
+			<componente>
+			<nombre estado="&cruz;">Kurt Cobain</nombre>
+			<rol>Voz y guitarra</rol>
+			</componente>
+			<componente>
+			<nombre estado="Vivo">Krist Novoselic</nombre>
+			<rol>Bajo</rol>
+			</componente>
+			<componente>
+			<nombre estado="Vivo"> Dave Grohl</nombre>
+			<rol>Bateria</rol>
+			</componente>
+		</componentes>
+		<discografia>	
+			<disco id="1">
+				<titulo>Bleach</titulo>
+				<fechaPublicacion>1989</fechaPublicacion>
+				<numCanciones>11</numCanciones>
+				<ventas>5.000.000</ventas>
+				<fotoCubierta>cubiertas/bleach.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/Bleach_(album)</link>
+			</disco>
+			<disco id="2">
+				<titulo>Nevermind</titulo>
+				<fechaPublicacion>1991</fechaPublicacion>
+				<numCanciones>12</numCanciones>
+				<descripcion>30.000.000</descripcion>
+				<fotoCubierta>cubiertas/nevermind.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/Nevermind</link>
+			</disco>
+			<disco id="3">
+				<titulo>Incesticide</titulo>
+				<fechaPublicacion>1992</fechaPublicacion>
+				<numCanciones>11</numCanciones>
+				<ventas>5.000.000</ventas>
+				<fotoCubierta>cubiertas/incesticide.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/Incesticide</link>
+			</disco>
+			<disco id="4">
+				<titulo>In Utero</titulo>
+				<fechaPublicacion>1993</fechaPublicacion>
+				<numCanciones>12</numCanciones>
+				<ventas>15.000.000</ventas>
+				<fotoCubierta>cubiertas/in Utero.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/In_Utero_(%C3%A1lbum)</link>
+			</disco>
+			<disco id="5">
+				<titulo>UInplugged in New York</titulo>
+				<fechaPublicacion>1994</fechaPublicacion>
+				<numCanciones>14</numCanciones>
+				<ventas>6.800.000</ventas>
+				<fotoCubierta>cubiertas/unplugged.jpg</fotoCubierta>
+				<link></link>
+			</disco>
+		</discografia>
+	</grupo>
+	<grupo idg="2">
+		<nombreG>The Doors</nombreG>
+		<nacionalidad>EEUU</nacionalidad>
+		<idioma>Inglés</idioma>
+		<estilo>Rock Psicodélico, Blues-Rock</estilo>
+		<actividad>1965 - 1973</actividad>
+		<componentes>
+			<componente>
+			<nombre estado="&cruz;">Jim Morrison</nombre>
+			<rol>Voz</rol>
+			</componente>
+			<componente>
+			<nombre estado="&cruz;">Ray Manzarek</nombre>
+			<rol>Teclado y coros bajo</rol>
+			</componente>
+			<componente>
+			<nombre estado="Vivo">Robby Krieger</nombre>
+			<rol>Guitarra y armónica</rol>
+			</componente>
+			<componente>
+			<nombre estado="Vivo">John Densmore</nombre>
+			<rol>Batería y percusión</rol>
+			</componente>
+		</componentes>
+		<discografia>	
+			<disco id="1">
+				<titulo>The Doors</titulo>
+				<fechaPublicacion>1967</fechaPublicacion>
+				<numCanciones>11</numCanciones>
+				<ventas>1.500.000</ventas>
+				<fotoCubierta>cubiertas/doors.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/The_Doors_%28%C3%A1lbum%29</link>
+			</disco>
+			<disco id="2">
+				<titulo>Strange Days</titulo>
+				<fechaPublicacion>1967</fechaPublicacion>
+				<numCanciones>12</numCanciones>
+				<descripcion>1.000.000</descripcion>
+				<fotoCubierta>cubiertas/strange.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/Strange_Days_%28%C3%A1lbum%29</link>
+			</disco>
+			<disco id="3">
+				<titulo>Waitinf for the Sun</titulo>
+				<fechaPublicacion>1968</fechaPublicacion>
+				<numCanciones>11</numCanciones>
+				<ventas>1.000.000</ventas>
+				<fotoCubierta>cubiertas/waiting.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/Waiting_for_the_Sun</link>
+			</disco>
+			<disco id="4">
+				<titulo>The Soft Parade</titulo>
+				<fechaPublicacion>1969</fechaPublicacion>
+				<numCanciones>15</numCanciones>
+				<ventas>1.500.000</ventas>
+				<fotoCubierta>cubiertas/soft.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/The_Soft_Parade</link>
+			</disco>
+			<disco id="5">
+				<titulo>Morrison Hotel</titulo>
+				<fechaPublicacion>1970</fechaPublicacion>
+				<numCanciones>11</numCanciones>
+				<ventas>1.500.000</ventas>
+				<fotoCubierta>cubiertas/Hotel.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/Morrison_Hotel</link>
+			</disco>
+			<disco id="6">
+				<titulo>LA Woman</titulo>
+				<fechaPublicacion>1971</fechaPublicacion>
+				<numCanciones>10</numCanciones>
+				<ventas>1.500.000</ventas>
+				<fotoCubierta>cubiertas/LA Woman.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/L.A._Woman</link>
+			</disco>
+		</discografia>
+	</grupo>
+	<grupo idg="3">
+		<nombreG>Joy Division</nombreG>
+		<nacionalidad>UK</nacionalidad>
+		<idioma>Inglés</idioma>
+		<estilo>Post-Punk</estilo>
+		<actividad>1976-1980</actividad>
+		<componentes>
+			<componente>
+			<nombre estado="&cruz;">Ian Curtis</nombre>
+			<rol>Voz y guitarra</rol>
+			</componente>
+			<componente>
+			<nombre estado="Vivo">Bernard Sumner</nombre>
+			<rol>Guitarra y teclados</rol>
+			</componente>
+			<componente>
+			<nombre estado="Vivo">Peter Hook</nombre>
+			<rol>bajo y coros</rol>
+			</componente>
+			<componente>
+			<nombre estado="Vivo">Stephen Morris</nombre>
+			<rol>Bateria y percusión</rol>
+			</componente>
+		</componentes>
+		<discografia>	
+			<disco id="1">
+				<titulo>Unknown Pleasures</titulo>
+				<fechaPublicacion>1979</fechaPublicacion>
+				<numCanciones>10</numCanciones>
+				<ventas>500.000</ventas>
+				<fotoCubierta>cubiertas/unknown.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/Unknown_Pleasures</link>
+			</disco>
+			<disco id="2">
+				<titulo>Closer</titulo>
+				<fechaPublicacion>1980</fechaPublicacion>
+				<numCanciones>9</numCanciones>
+				<descripcion>1.000.000</descripcion>
+				<fotoCubierta>cubiertas/closer.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/Closer_%28%C3%A1lbum_de_Joy_Division%29</link>
+			</disco>
+			<disco id="3">
+				<titulo>Still</titulo>
+				<fechaPublicacion>1981</fechaPublicacion>
+				<numCanciones>34</numCanciones>
+				<ventas>1.000.000</ventas>
+				<fotoCubierta>cubiertas/still.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/Still_%28%C3%A1lbum_de_Joy_Division%29</link>
+			</disco>
+			<disco id="4">
+				<titulo>Substance</titulo>
+				<fechaPublicacion>1988</fechaPublicacion>
+				<numCanciones>17</numCanciones>
+				<ventas>1.500.000</ventas>
+				<fotoCubierta>cubiertas/substance.jpg</fotoCubierta>
+				<link>https://es.wikipedia.org/wiki/Substance</link>
+			</disco>
+		</discografia>
+	</grupo>
+</grupos>

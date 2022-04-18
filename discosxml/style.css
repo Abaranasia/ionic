@@ -1,0 +1,109 @@
+body {
+	font-family: calibri;
+	color: #882222;
+	}
+
+p, li {
+	font-size:14px;
+	}
+
+li {
+	margin-left: -15px;
+}
+img {
+	margin-left: 5px;
+}
+
+#cuerpo{
+	position: relative;
+	width:1100px;
+	margin: 0px auto;
+	}
+
+h1 {
+	font-family: "Times new Roman";
+	font-size:40px;
+	font-style:italic;
+	color: #AA3333;
+	letter-spacing: 3px;
+	text-align: center;	
+	}
+
+h2 {
+	font-size:40px;
+}
+.grupos {
+	width:1100px;
+	position: relative;
+	top:0px;
+	height:650px;
+}
+
+.grupo {
+	background-color:#AA3333;
+	color: white;
+	padding:5px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 320px;
+	height:180px;
+	line-height:100px;
+	}
+
+.datosgrupo {
+	background-color:#AA3333;
+	color: white;
+	padding:5px;
+	position: absolute;
+	top: 0px;
+	left: 340px;
+	width: 320px;
+	height:180px;
+	}
+	
+.componentes {
+	background-color:#AA3333;
+	color: white;
+	padding:5px;
+	position: absolute;
+	top: 0px;
+	left: 680px;
+	width: 320px;
+	height:180px;
+	}
+	
+.discografia {
+	background-color:#AA3333;
+	padding:5px;
+	color: white;
+	position: absolute;
+	top: 200px;
+	left: 0px;
+	width: 1000px;
+	}
+
+.album {
+	background-color:#cfd1d2;
+	color: black;
+	padding:5px;
+	margin: 5px;
+	float: left;
+	top: 0px;
+	width: 310px;
+	height:150px;
+	}
+	
+
+.muerto {
+	font-size:20px;
+	font-weight:bold;
+	padding-left: 8px;
+	color: #000000;
+	}
+	
+.bandera {
+	position: absolute;
+	top: 70px;
+	right: 10px;
+}

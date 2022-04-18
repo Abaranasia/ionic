@@ -1,0 +1,49 @@
+{
+  "Discos" : {
+    "Violator" : {
+      "Cubierta" : "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Depeche_Mode_-_Violator.png/220px-Depeche_Mode_-_Violator.png",
+      "Grupo" : "Depeche Mode",
+	  "Estilo" : "Synth pop,  Dark wave",
+	  "Lanzamiento" : "1990",
+	  "Duracion" : "47:02",
+      "Descripción" : "Violator (en español, Violador, aunque sólo indicativo de la connotación transgresora) es el séptimo álbum del grupo inglés de música electrónica, Depeche Mode (Andrew Fletcher, Martin Gore, Alan Wilder, David Gahan), producido durante 1989-90 y publicado en 1990. Fue producido por el grupo y Mark Ellis Flood. Todos los temas fueron escritos por Martin Gore. Al 2009, Violator ha vendido más de 13.5 millones de copias; sigue siendo el álbum mejor vendido en la trayectoria de DM. En 1990 llegó al número 17 en la tabla de fin de año de la revista Billboard.10​ Es considerado uno de los mejores discos de la historia y de los más influyentes de la música electrónica.",
+      "Video" : "https://www.youtube.com/watch?v=aGSKrC7dGcY"
+    },
+    "Californication" : {
+      "Cubierta" : "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/RedHotChiliPeppersCalifornication.jpg/220px-RedHotChiliPeppersCalifornication.jpg",
+      "Grupo" : "Red Hot Chilli Peppers",
+	  "Estilo" : "Rock alternativo, funk rock",
+	  "Lanzamiento" : "1999",
+	  "Duracion" : "56:24",
+      "Descripción" : "Californication es el nombre del séptimo álbum de estudio de la banda estadounidense de rock alternativo y funk rock Red Hot Chili Peppers. Rick Rubin lo produjo y Warner Bros. Records lo lanzó al mercado el 8 de junio de 1999. El álbum marcó el regreso de John Frusciante como guitarrista en reemplazo de Dave Navarro, lo que resultó en un cambio de estilo de la banda hacia un sonido radicalmente diferente al producido en el álbum previo One Hot Minute (1995).",
+      "Video" : "https://www.youtube.com/watch?v=YlUKcNNmywk"
+    },
+    "Nevermind" : {
+      "Cubierta" : "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/NirvanaNevermindalbumcover.jpg/220px-NirvanaNevermindalbumcover.jpg",
+      "Grupo" : "Nirvana",
+	  "Estilo" : "Grunge, Rock alternativo",
+	  "Lanzamiento" : "1991",
+	  "Duracion" : "42:38",
+      "Descripción" : "Nevermind es el segundo álbum de estudio de la banda estadounidense Nirvana, publicado el 24 de septiembre de 1991. Producido por Butch Vig, Nevermind fue el primer lanzamiento de la banda con DGC Records. El líder de la agrupación, Kurt Cobain, trató de hacer música fuera de los límites restrictivos de la escena grunge de Seattle, aprovechando la influencia de grupos como los Pixies y su uso de la dinámica de canciones ruidosas y calmadas. Pese a las escasas esperanzas comerciales por parte de la banda y del sello discográfico, Nevermind se convirtió en un sorprendente éxito a finales de 1991, en gran parte debido a su primer sencillo, «Smells Like Teen Spirit».",
+      "Video" : "https://www.youtube.com/watch?v=hTWKbfoikeg"
+    },
+    "Achtung Baby" : {
+      "Cubierta" : "https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Achtung_Baby.png/220px-Achtung_Baby.png",
+      "Grupo" : "U2",
+	  "Estilo" : "Rock Industrial, Rock alternativo",
+	  "Lanzamiento" : "1991",
+	  "Duracion" : "55:27",
+      "Descripción" : "Achtung Baby es el séptimo álbum de estudio de la banda U2 publicado el 19 de noviembre de 1991 que se considera como la segunda obra maestra de la banda junto con The Joshua Tree. Molestos por las críticas recibidas por el álbum Rattle and Hum, publicado en 1988, U2 modificó su dirección musical incorporando a su sonido influencias del rock alternativo, música industrial y la música dance electrónica. Temáticamente, el álbum es más oscuro e introspectivo que sus anteriores discos. Achtung Baby y la gira Zoo TV Tour fueron el pivote central de la reinvención del grupo durante la década de los 90.",
+      "Video" : "https://www.youtube.com/watch?v=TxcDTUMLQJI"
+    },
+    "Out of Time" : {
+      "Cubierta" : "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/R.E.M._-_Out_of_Time.jpg/220px-R.E.M._-_Out_of_Time.jpg",
+      "Grupo" : "REM",
+	  "Estilo" : "Rock alternativo",
+	  "Lanzamiento" : "1991",
+	  "Duracion" : "44:08",
+      "Descripción" : "Out of Time es el séptimo álbum de la banda estadounidense de rock alternativo R.E.M. Fue lanzado por Warner Bros. en 1991. El álbum ganó tres premios Grammy en 1992: uno como mejor álbum de música alternativa, y dos por el primer sencillo, 'Losing My Religion'. Debutó en el número 1 en Estados Unidos y volvió a esa posición varias semanas después. En 1998, en una votación hecha por los lectores de la revista Q colocaron a Out of Time en el número 38 entre los mejores álbumes de todos los tiempos; en la misma lista pero del año 2006, lo colocaron en el lugar 37. En 2006, el álbum fue elegido por la revista Time como uno de los 100 mejores discos de todos los tiempos.",
+      "Video" : "https://www.youtube.com/watch?v=xwtdhWltSIg"
+    }
+  }
+}
