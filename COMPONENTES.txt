@@ -1,0 +1,10 @@
+-Checkboxes de la lista
+-Introducir texto a la lista
+-Brindis en la parte inferior cuando se agrega a la lista
+-Bar de rango que altera un número que está en la parte superior
+-Slider de imágenes de ornitorrinco
+-Loading en cambios de página (sin pestañas)
+-list base de fuego dinámica con iconos y tachado casilla de verificación clic
+-Inicio de información entre actividades colocadas en color rojo (pasadas del .TS sin mediación con HTML)
+-CardView
+-3 fichas y 2 páginas
